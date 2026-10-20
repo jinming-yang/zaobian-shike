@@ -1,0 +1,176 @@
+/* 奶油元气厨房 · 华丽插画版统一视觉层 */
+page {
+  background:
+    radial-gradient(circle at 8% 4%, rgba(255,214,107,.24) 0, rgba(255,214,107,.24) 18rpx, transparent 19rpx),
+    radial-gradient(circle at 92% 13%, rgba(255,182,193,.18) 0, rgba(255,182,193,.18) 14rpx, transparent 15rpx),
+    linear-gradient(180deg,#fffdf5 0%,#fff9f0 48%,#fff4e8 100%);
+}
+
+.page-shell {
+  position:relative;
+  background:
+    radial-gradient(circle at 5% 16%,rgba(255,214,107,.16) 0,rgba(255,214,107,.16) 8rpx,transparent 9rpx),
+    radial-gradient(circle at 95% 34%,rgba(158,219,195,.16) 0,rgba(158,219,195,.16) 10rpx,transparent 11rpx),
+    radial-gradient(circle at 12% 76%,rgba(255,182,193,.13) 0,rgba(255,182,193,.13) 7rpx,transparent 8rpx);
+}
+
+.primary-button {
+  border:2rpx solid rgba(255,255,255,.76);
+  background:linear-gradient(135deg,#ffad86 0%,#ff946d 55%,#f47f5a 100%);
+  box-shadow:0 8rpx 0 #df6f4d,0 18rpx 34rpx rgba(244,127,90,.26);
+  letter-spacing:1rpx;
+}
+.primary-button[disabled] { color:#fff8f2; background:#d8c8bd; box-shadow:0 6rpx 0 #beada1; }
+.secondary-button { border:2rpx solid #ffdca0; background:linear-gradient(135deg,#fff8dc,#ffedb2); box-shadow:0 7rpx 0 #e9ca83; }
+
+.welcome,.intro-card,.prep-header,.settings-intro,.profile-card,.shopping-summary {
+  border:3rpx solid #f3c982;
+  box-shadow:0 8rpx 0 #f5dcae,0 22rpx 44rpx rgba(147,93,54,.13);
+}
+.welcome:before,.intro-card:before,.prep-header:before,.settings-intro:before,.profile-card:before,.shopping-summary:before {
+  content:""; position:absolute; width:90rpx; height:90rpx; right:130rpx; top:-38rpx; border-radius:50%;
+  background:radial-gradient(circle,rgba(255,255,255,.8) 0 7rpx,transparent 8rpx),radial-gradient(circle at 70% 70%,rgba(255,182,193,.34) 0 10rpx,transparent 11rpx);
+  pointer-events:none;
+}
+
+.eyebrow,.step-kicker,.complete-kicker {
+  display:inline-flex; align-items:center; min-height:38rpx; padding:0 15rpx; border-radius:19rpx;
+  color:#a94f35; background:#fff0e9; border:2rpx solid #ffd1bc; letter-spacing:2rpx;
+}
+
+.search-box {
+  border:3rpx solid #f0d8c5!important;
+  background:linear-gradient(180deg,#fff,#fffdf9)!important;
+  box-shadow:inset 0 2rpx 0 rgba(255,255,255,.9),0 8rpx 0 #f5e7dc,0 18rpx 34rpx rgba(107,70,48,.08)!important;
+}
+.pantry-entry,.shopping-entry,.recipe-row,.selected-row,.result-card,.rating-card,.calorie-card,.ingredient-section,.preparation-card,.shortage-result-card,.shopping-row,.general-settings-entry,.preference-card>view,.report-card,.report-dishes,.favorite-card,.history-row,.empty-card,.setting-card,.setting-list,.mode-row,.nutrition-card {
+  border:2rpx solid #efd8c8!important;
+  box-shadow:0 7rpx 0 #f4e4d8,0 16rpx 30rpx rgba(110,72,48,.08)!important;
+}
+
+.pantry-entry,.shopping-entry { background:linear-gradient(135deg,#fff,#fff7e3)!important; }
+.pantry-entry:active,.shopping-entry:active,.recipe-row:active,.result-card:active { transform:translateY(3rpx); box-shadow:0 3rpx 0 #f4e4d8!important; }
+.pantry-icon,.shopping-icon { border:2rpx solid #bfe8d7; box-shadow:inset 0 0 0 5rpx rgba(255,255,255,.5); }
+
+.section-heading>text:first-child,.list-heading>text:first-child,.section-title>text:first-child {
+  position:relative; color:#59483f; font-weight:800;
+}
+.section-heading>text:first-child:after,.list-heading>text:first-child:after {
+  content:""; display:inline-block; width:34rpx; height:12rpx; margin-left:10rpx; border-radius:8rpx;
+  background:linear-gradient(90deg,#ff946d 0 45%,#ffd66b 45% 72%,#9edbc3 72%);
+}
+
+.category-card,.chip,.nutrient-tab {
+  border-width:3rpx!important;
+  box-shadow:0 5rpx 0 #eadbcf;
+}
+.category-card:nth-child(3n+1) { background:#fff0e9; border-color:#ffd1bc; }
+.category-card:nth-child(3n+2) { background:#fff7d8; border-color:#f2d882; }
+.category-card:nth-child(3n) { background:#eaf8f2; border-color:#bfe8d7; }
+.category-card.active,.chip.active,.chip.tag.active,.nutrient-tab.active {
+  border-color:#ff7f57!important; background:linear-gradient(135deg,#ffad86,#ff8d65)!important;
+  box-shadow:0 6rpx 0 #dc6e4c,0 12rpx 24rpx rgba(255,148,109,.2)!important;
+}
+
+.recipe-row,.result-card,.favorite-card,.history-row { overflow:hidden; background:linear-gradient(135deg,#fff 0%,#fffdf7 70%,#fff3dc 100%)!important; }
+.recipe-thumb,.result-card>image,.favorite-card image,.history-row>image { border:4rpx solid #fff; box-shadow:0 0 0 2rpx #f2cfae,0 8rpx 18rpx rgba(91,57,38,.13); }
+.favorite-star { border:2rpx solid #ffd8c9; border-radius:50%; background:#fff3ec; }
+.favorite-star.active { color:#ff8a68; background:#ffe1d7; animation:heart-pop .28s ease-out; }
+@keyframes heart-pop { 50% { transform:scale(1.16) rotate(-5deg); } }
+
+.result-status,.done,.pending,.tag { border:2rpx solid currentColor; font-weight:700; }
+.allergy-warning,.result-allergy,.shortage-allergy,.allergy-list-warning { border-radius:14rpx; }
+
+.amount-button,.serving-control button,.stepper view { font-weight:800; }
+.amount-control,.stepper { box-shadow:inset 0 2rpx 6rpx rgba(89,72,63,.07); }
+
+.time-card,.timer-card {
+  border:3rpx solid #f3c982!important;
+  box-shadow:0 8rpx 0 #f2d8a4,0 20rpx 38rpx rgba(120,79,45,.13)!important;
+}
+.timer-card.running { animation:timer-glow 1.8s ease-in-out infinite; }
+@keyframes timer-glow { 50% { box-shadow:0 8rpx 0 #f2d8a4,0 20rpx 45rpx rgba(255,148,109,.28); } }
+.timer-card.done { border-color:#8fd1b8!important; box-shadow:0 8rpx 0 #bfe8d7,0 20rpx 38rpx rgba(62,116,99,.13)!important; }
+
+.heat-guide,.safety-note,.source-note,.amount-note {
+  border:2rpx dashed #e8b86e!important; border-radius:22rpx!important; background:linear-gradient(135deg,#fff9e6,#fff3cf)!important;
+}
+.preparation-card.prepared,.shopping-row.purchased,.mode-row.active { box-shadow:0 7rpx 0 #c8e9dc,0 16rpx 30rpx rgba(62,116,99,.08)!important; }
+
+.report-tabs { padding:8rpx!important; border:2rpx solid #f4cdbb; box-shadow:inset 0 2rpx 8rpx rgba(124,76,49,.08); }
+.report-tabs .active { box-shadow:0 5rpx 0 #dc6e4c; }
+.trend-track { border:2rpx solid #d3eadf; background:linear-gradient(180deg,#f5fbf8,#e8f7f0)!important; }
+.trend-track view { background:linear-gradient(180deg,#9edbc3,#54a989)!important; }
+
+.missing-picker,.exit-dialog-card,.guide-card {
+  border:3rpx solid #f0c888!important;
+  box-shadow:0 12rpx 0 #ead4ae,0 30rpx 80rpx rgba(66,42,29,.2)!important;
+}
+
+.empty,.selected-empty,.shopping-empty,.empty-card {
+  background:linear-gradient(135deg,rgba(255,255,255,.92),rgba(255,246,216,.82));
+  border:2rpx dashed #eac487!important;
+}
+
+.bottom-action,.detail-bottom-action,.prep-bottom-action {
+  border-top:2rpx solid #f1d9c6;
+  background:linear-gradient(180deg,rgba(255,253,246,.97),rgba(255,247,235,.99))!important;
+  box-shadow:0 -12rpx 35rpx rgba(112,72,45,.1)!important;
+}
+
+/* 菜谱详情改为参考稿中的“插画相框 + 信息纸片”构图 */
+.detail-page { padding-top:18rpx; }
+.detail-page .hero { width:calc(100% - 32rpx); height:520rpx; margin:0 16rpx; overflow:hidden; border:4rpx solid #fff; border-radius:30rpx; box-sizing:border-box; box-shadow:0 0 0 3rpx #efc78e,0 10rpx 0 #ead3ab,0 24rpx 48rpx rgba(102,64,40,.18); }
+.detail-page .hero-blur { display:none; }
+.detail-page .hero-image { width:100%; height:100%; }
+.detail-page .hero-fade { background:linear-gradient(transparent 54%,rgba(89,72,63,.45)); }
+.detail-page .detail-content { margin-top:-32rpx; padding-top:0; }
+.detail-page .title-block { position:relative; z-index:3; border-color:#efc78e!important; background:linear-gradient(135deg,#fff,#fff7dc)!important; }
+
+/* 完成页与个人页增加海报式层次 */
+.complete-content { border:3rpx solid #f0cb8e; border-radius:32rpx; background:rgba(255,253,244,.84); box-shadow:0 9rpx 0 #ead7b6,0 28rpx 60rpx rgba(105,67,42,.13); }
+.profile-page .report-section { padding:18rpx; border:2rpx solid #f0d3bc; border-radius:28rpx; background:linear-gradient(145deg,rgba(255,255,255,.76),rgba(255,246,222,.72)); box-shadow:0 8rpx 0 #f1e0d1; }
+
+/* 设置与采购列表做成手账纸片 */
+.settings-page .section-title,.shopping-page .bulk-actions { padding:10rpx 14rpx; border-radius:18rpx; background:rgba(255,255,255,.66); }
+.setting-row { background:linear-gradient(90deg,#fff,#fffdf7); }
+.shopping-row:nth-child(odd) { background:linear-gradient(135deg,#fff,#fff8e4)!important; }
+.shopping-row:nth-child(even) { background:linear-gradient(135deg,#fff,#edf9f4)!important; }
+
+/* 食材页做成彩色食材便签 */
+.pantry-page .selected-row:nth-child(3n+1) { background:linear-gradient(135deg,#fff,#fff1e8)!important; }
+.pantry-page .selected-row:nth-child(3n+2) { background:linear-gradient(135deg,#fff,#fff7d8)!important; }
+.pantry-page .selected-row:nth-child(3n) { background:linear-gradient(135deg,#fff,#eaf8f2)!important; }
+.pantry-page .selected-row ingredient-image { border:3rpx solid #fff; box-shadow:0 0 0 2rpx #edd1bd; }
+.pantry-page .find-button { margin-bottom:8rpx; }
+.pantry-page .result-heading { padding:18rpx 20rpx; border:2rpx solid #f0cf9d; border-radius:22rpx; background:linear-gradient(135deg,#fff8dd,#fff); }
+
+/* 备菜页做成分区料理手账 */
+.prep-page .ingredient-section { padding-top:10rpx; overflow:hidden; }
+.prep-page .section-title { margin:-10rpx -2rpx 0; padding:18rpx 22rpx; background:linear-gradient(90deg,#fff0e8,#fff8d9); }
+.prep-page .section-title>text:first-child { display:inline-flex; align-items:center; justify-content:center; width:50rpx; height:50rpx; border-radius:50%; color:#fff; background:#ff946d; box-shadow:0 5rpx 0 #db704e; }
+.prep-page .preparation-card:nth-child(3n+1) { background:linear-gradient(135deg,#fff,#fff3ea)!important; }
+.prep-page .preparation-card:nth-child(3n+2) { background:linear-gradient(135deg,#fff,#fff8dc)!important; }
+.prep-page .preparation-card:nth-child(3n) { background:linear-gradient(135deg,#fff,#edf9f4)!important; }
+
+/* 烹饪页改成更强的插画操作台 */
+.cook-page .cook-topbar { margin:12rpx 18rpx 0; padding-left:18rpx; padding-right:18rpx; border:2rpx solid #f0d2bb; border-radius:28rpx 28rpx 0 0; background:linear-gradient(135deg,#fff,#fff6df); box-shadow:0 7rpx 0 #f1dfd1; }
+.cook-page .progress-track { height:12rpx; margin:0 18rpx; overflow:hidden; border:2rpx solid #f0d2bb; border-top:0; border-radius:0 0 10rpx 10rpx; }
+.cook-page .progress-track view { background:linear-gradient(90deg,#ff946d,#ffd66b,#9edbc3); }
+.cook-page .step-content { margin:20rpx 18rpx 40rpx; padding:22rpx; border:2rpx solid #f0d5c0; border-radius:30rpx; background:linear-gradient(155deg,rgba(255,255,255,.96),rgba(255,248,226,.94)); box-shadow:0 8rpx 0 #f0dfd2,0 20rpx 38rpx rgba(107,70,45,.1); }
+.cook-page .step-image,.cook-page .step-image-placeholder { border:4rpx solid #fff; box-sizing:border-box; box-shadow:0 0 0 3rpx #efc78e,0 12rpx 28rpx rgba(89,57,38,.14); }
+.cook-page .step-label { border:2rpx solid #ffc9b3; box-shadow:0 4rpx 0 #f1c5b2; }
+.cook-page .parallel-button,.cook-page .previous-button { border-width:3rpx; box-shadow:0 5rpx 0 #bcdccc; }
+
+/* 报告图表和收藏做成杂志式卡片 */
+.profile-page .report-card { background:linear-gradient(145deg,#fff,#fff8df)!important; }
+.profile-page .report-number { border-radius:20rpx; background:rgba(255,255,255,.68); }
+.profile-page .favorite-card { border-color:#efc990!important; }
+.profile-page .history-row:nth-child(odd) { background:linear-gradient(135deg,#fff,#fff5e7)!important; }
+.profile-page .history-row:nth-child(even) { background:linear-gradient(135deg,#fff,#eef9f5)!important; }
+
+@media (max-width:350px) {
+  .welcome,.intro-card,.prep-header,.settings-intro { padding-right:150rpx; }
+  .welcome-mascot,.intro-mascot,.prep-mascot,.settings-mascot { width:150rpx; }
+  .welcome-title,.page-title,.prep-title { font-size:36rpx; }
+}

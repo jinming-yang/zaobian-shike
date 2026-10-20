@@ -1,0 +1,81 @@
+<view wx:if="{{recipe}}" class="page-shell detail-page safe-bottom">
+  <active-cooks bottom-offset="180" />
+  <view class="hero">
+    <image class="hero-blur" src="{{heroImage || recipe.image}}" binderror="useFallbackImage" mode="aspectFill" />
+    <image class="hero-image" src="{{heroImage || recipe.image}}" binderror="useFallbackImage" mode="aspectFill" />
+    <view class="hero-fade"></view>
+    <view class="back-button" style="top: {{backButtonTop}}px;" hover-class="back-button-pressed" hover-stay-time="120" bindtap="goBack">
+      <text>←</text>
+      <text>返回菜谱</text>
+    </view>
+  </view>
+
+  <view class="detail-content">
+    <view class="title-block">
+      <view>
+        <text class="recipe-title">{{recipe.name}}</text>
+        <text class="recipe-subtitle">{{recipe.subtitle}}</text>
+      </view>
+      <view class="title-actions">
+        <view class="detail-star {{isFavorite ? 'active' : ''}}" bindtap="toggleFavorite" hover-class="tap-pressed" hover-stay-time="100"><image src="/assets/icons/illustrated/heart.png" mode="aspectFit" /></view>
+        <view class="tag">{{recipe.categories[0]}}</view>
+      </view>
+    </view>
+    <view class="xiaozhao-tip"><image src="/assets/characters/xiaozao-welcome.png" mode="aspectFit" /><text>先看看时间、难度和营养，再开始备菜吧</text></view>
+
+    <view class="rating-grid">
+      <view class="rating-card">
+        <text class="rating-label">食材复杂度</text>
+        <view class="stars">
+          <text wx:for="{{ingredientStars}}" wx:key="value" class="{{item.active ? 'active' : ''}}">★</text>
+        </view>
+        <text class="rating-caption">{{recipe.ingredientComplexity <= 2 ? '食材精简' : recipe.ingredientComplexity <= 3 ? '准备适中' : '食材丰富'}}</text>
+      </view>
+      <view class="rating-card">
+        <text class="rating-label">烹饪难度</text>
+        <view class="stars">
+          <text wx:for="{{difficultyStars}}" wx:key="value" class="{{item.active ? 'active' : ''}}">★</text>
+        </view>
+        <text class="rating-caption">{{recipe.difficulty <= 2 ? '新手友好' : recipe.difficulty <= 3 ? '需要留心火候' : '有一定挑战'}}</text>
+      </view>
+    </view>
+
+    <view class="time-card">
+      <image class="clock-icon illustrated-icon" src="/assets/icons/illustrated/timer.png" mode="aspectFit" />
+      <view>
+        <text>预计烹饪时长</text>
+        <view><text class="time-number">{{recipe.cookMinutes}}</text><text class="time-unit"> 分钟左右</text></view>
+      </view>
+      <text class="time-note">从开火下锅后计</text>
+    </view>
+
+    <view wx:if="{{showCalories}}" class="calorie-card">
+      <view><text>约 {{displayCalories}}</text><text>千卡 / {{calorieServings}}人份</text></view>
+      <view><text>≈ 慢跑 {{jogMinutes}} 分钟</text><text>按约8千卡/分钟粗略换算</text></view>
+      <text>{{calorieSource}}；实际数值会随品牌、用油和份量变化。</text>
+    </view>
+
+    <nutrition-card nutrition="{{nutrition}}" />
+    <button class="secondary-button" open-type="share">分享这道菜</button>
+    <view wx:if="{{allergyWarning}}" class="allergy-warning">
+      <text>过敏原警示</text>
+      <text>这道菜可能含有：{{allergyWarning}}。请同时核对所购食品包装配料表。</text>
+    </view>
+
+    <view class="safety-note">
+      <text class="safety-title">烹饪提醒</text>
+      <text>{{recipe.safetyNote}}</text>
+    </view>
+
+    <view class="source-note">
+      <text>菜谱校验</text>
+      <text>{{sourceLabel}} · {{recipe.sourceName}}</text>
+    </view>
+
+  </view>
+  <view class="detail-bottom-action">
+    <button class="primary-button" bindtap="startPrep">开始备菜</button>
+  </view>
+</view>
+
+<page-tutorial id="page-guide" page-key="{{tutorialKey}}" steps="{{tutorialSteps}}" />

@@ -1,0 +1,101 @@
+<view class="page-shell profile-page safe-bottom">
+  <active-cooks bottom-offset="145" />
+  <view class="profile-card">
+    <image class="illustration-card-bg" src="/assets/illustrations/card-profile-journal.jpg" mode="aspectFill" />
+    <image class="profile-vignette" src="/assets/illustrations/profile-vignette-v2.png" mode="aspectFit" />
+    <image class="profile-bow" src="/assets/stickers/v2/bow.png" mode="aspectFit" />
+    <view class="profile-identity">
+      <image class="avatar" src="/assets/characters/xiaozao-welcome.png" mode="aspectFit" />
+      <view class="profile-copy">
+        <text>小灶同学</text>
+        <text>用美食记录每一餐的温度</text>
+      </view>
+    </view>
+    <view class="profile-stats">
+      <view><text>{{favorites.length}}</text><text>收藏</text></view>
+      <view><text>{{history.length}}</text><text>记录</text></view>
+      <view><text>{{weeklyCount}}</text><text>本周完成</text></view>
+    </view>
+  </view>
+
+  <view class="general-settings-entry" bindtap="openSettings" hover-class="tap-pressed" hover-stay-time="100">
+    <view class="settings-entry-label"><image src="/assets/icons/illustrated/settings.png" mode="aspectFit" /><text>设置</text></view><text>›</text>
+  </view>
+
+  <view class="preference-card">
+    <view class="preference-button" bindtap="openTags" hover-class="tap-pressed" hover-stay-time="100">
+      <text>个人标签</text>
+      <text wx:if="{{tagSummary}}" class="preference-summary">{{tagSummary}}</text>
+    </view>
+    <view class="preference-button" bindtap="openAllergens" hover-class="tap-pressed" hover-stay-time="100">
+      <text>忌口与过敏原</text>
+      <text wx:if="{{allergySummary}}" class="preference-summary">{{allergySummary}}</text>
+    </view>
+  </view>
+
+  <view class="report-section">
+    <view class="report-tabs">
+      <view class="{{reportTab === 'daily' ? 'active' : ''}}" data-tab="daily" bindtap="switchReport" hover-class="tap-pressed" hover-stay-time="100">每日报告</view>
+      <view class="{{reportTab === 'weekly' ? 'active' : ''}}" data-tab="weekly" bindtap="switchReport" hover-class="tap-pressed" hover-stay-time="100">每周报告</view>
+    </view>
+    <view class="report-card">
+      <view class="report-number"><text>{{report.count}}</text><text>道完成</text></view>
+      <view class="report-number"><text>{{report.minutes}}</text><text>分钟烹饪</text></view>
+    </view>
+      <view class="report-insights">
+        <text>连续做饭 {{report.streak}} 天 · 常做菜系：{{report.favoriteCuisine}}</text>
+        <text>{{report.review}}</text>
+      </view>
+      <view class="report-nutrition">
+        <text class="report-nutrition-title">已完成菜品营养参考</text>
+        <text>蛋白质 {{report.totals.protein === null ? '待补充' : report.totals.protein + 'g'}} · 脂肪 {{report.totals.fat === null ? '待补充' : report.totals.fat + 'g'}}</text>
+        <text>碳水 {{report.totals.carbs === null ? '待补充' : report.totals.carbs + 'g'}} · 膳食纤维 {{report.totals.fiber === null ? '待补充' : report.totals.fiber + 'g'}}</text>
+        <text>每道完成菜取默认一人份；{{report.partialCount}}道含未匹配食材。以上为已匹配食材小计，不代表实际摄入量。</text>
+      </view>
+      <view class="report-trend">
+        <text>近7天营养趋势 · {{trendLabel}}小计</text>
+        <view class="nutrient-tabs">
+          <button wx:for="{{nutrientOptions}}" wx:key="key" class="nutrient-tab {{trendMetric === item.key ? 'active' : ''}}" data-key="{{item.key}}" bindtap="selectNutrient">{{item.label}}</button>
+        </view>
+        <view class="trend-columns"><view wx:for="{{nutritionTrend}}" wx:key="key" class="trend-column"><text>{{item.value === null ? '—' : item.value + 'g'}}</text><view class="trend-track"><view style="height:{{item.height}}%;"></view></view><text>{{item.label}}</text></view></view>
+        <text>— 表示无可统计数据；每道菜取一人份，部分食材尚未计入。</text>
+      </view>
+    <view class="report-dishes" wx:if="{{report.dishes.length}}">
+      <view wx:for="{{report.dishes}}" wx:key="id">
+        <image src="{{item.displayImage || item.image}}" mode="aspectFill" lazy-load="{{true}}" />
+        <view><text>{{item.name}}</text><text>{{item.dateText}}</text></view>
+      </view>
+    </view>
+    <view class="empty-card" wx:else>这个周期还没有完成菜品</view>
+  </view>
+
+  <view class="section-heading"><text>我的收藏</text><text>{{favorites.length}} 道</text></view>
+  <scroll-view scroll-x class="favorite-scroll" wx:if="{{favorites.length}}">
+    <view class="favorite-track">
+      <view wx:for="{{favorites}}" wx:key="id" class="favorite-card" data-id="{{item.id}}" bindtap="openFavorite" hover-class="tap-pressed" hover-stay-time="100">
+        <image src="{{item.displayImage || item.image}}" mode="aspectFill" lazy-load="{{true}}" />
+        <text>{{item.name}}</text>
+      </view>
+    </view>
+  </scroll-view>
+  <view class="empty-card" wx:else>点击菜谱列表中的星星即可收藏</view>
+
+  <view class="section-heading history-heading"><text>烹饪历史</text><text>{{history.length}} 条</text></view>
+  <view class="history-list" wx:if="{{history.length}}">
+    <view wx:for="{{history}}" wx:key="id" class="history-row" data-id="{{item.id}}" bindtap="openHistory" hover-class="tap-pressed" hover-stay-time="100">
+      <image src="{{item.recipe.displayImage || item.recipe.image}}" mode="aspectFill" lazy-load="{{true}}" />
+      <view class="history-copy">
+        <view><text>{{item.recipe.name}}</text><text class="{{item.completed ? 'done' : 'pending'}}">{{item.progressText}}</text></view>
+        <text>{{item.dateText}}</text>
+        <view class="history-progress"><view style="width: {{item.progress}}%"></view></view>
+      </view>
+      <view class="history-actions">
+        <text class="delete-history" data-id="{{item.id}}" catchtap="deleteHistory" hover-class="tap-pressed" hover-stay-time="100">删除</text>
+        <text class="chevron">›</text>
+      </view>
+    </view>
+  </view>
+  <view class="empty-card" wx:else>开始一次烹饪后，这里会保存进度</view>
+</view>
+
+<page-tutorial id="page-guide" page-key="{{tutorialKey}}" steps="{{tutorialSteps}}" />

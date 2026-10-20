@@ -1,0 +1,85 @@
+<view class="page-shell pantry-page safe-bottom">
+  <active-cooks bottom-offset="30" />
+  <view class="intro-card">
+    <image class="illustration-card-bg" src="/assets/illustrations/banner-pantry-v2.jpg" mode="aspectFill" />
+    <view class="intro-copy"><text class="eyebrow">蛋仔帮你配菜</text>
+    <text class="page-title">家里有什么，就做什么</text>
+    <text class="page-subtitle">添加主要食材，蛋仔帮你看看今天能做什么。</text></view>
+    <image class="intro-mascot mascot-bob" src="/assets/characters/danzai-reminder.png" mode="aspectFit" />
+  </view>
+
+  <view class="search-section">
+    <view class="search-box">
+      <image class="search-icon illustrated-icon" src="/assets/icons/illustrated/search.png" mode="aspectFit" />
+      <input placeholder="搜索番茄、鸡蛋、土豆……" value="{{keyword}}" bindinput="onSearchInput" confirm-type="search" />
+      <text wx:if="{{keyword}}" class="clear" bindtap="clearSearch" hover-class="tap-pressed" hover-stay-time="100">×</text>
+    </view>
+
+    <view class="search-results" wx:if="{{searchMatches.length}}">
+      <view wx:for="{{searchMatches}}" wx:key="key" class="search-result" data-key="{{item.key}}" bindtap="addIngredient" hover-class="tap-pressed" hover-stay-time="100">
+        <ingredient-image name="{{item.name}}" size="{{64}}" />
+        <view>
+          <text>{{item.name}}</text>
+          <text>计量单位：{{item.unit}}</text>
+        </view>
+        <text class="add-mark">＋</text>
+      </view>
+    </view>
+
+    <view class="no-match" wx:if="{{keyword && !searchMatches.length}}">食材列表中没有匹配项，请换个关键词</view>
+  </view>
+
+  <view class="selected-section">
+    <view class="section-heading">
+      <text>已用食材</text>
+      <text>{{selectedIngredients.length}} 种</text>
+    </view>
+
+    <view class="selected-empty" wx:if="{{!selectedIngredients.length}}">
+      <text>还没有添加食材</text>
+      <text>在上方搜索并点击匹配项</text>
+    </view>
+
+    <view class="selected-list" wx:else>
+      <view wx:for="{{selectedIngredients}}" wx:key="key" class="selected-row">
+        <ingredient-image name="{{item.name}}" size="{{68}}" />
+        <text class="selected-name">{{item.name}}</text>
+        <view class="amount-control">
+          <view class="amount-button" data-key="{{item.key}}" data-direction="-1" bindtap="adjustAmount" hover-class="tap-pressed" hover-stay-time="100">−</view>
+          <input type="digit" value="{{item.amount}}" data-key="{{item.key}}" bindinput="changeAmount" bindblur="finishAmount" />
+          <text class="unit">{{item.unit}}</text>
+          <view class="amount-button" data-key="{{item.key}}" data-direction="1" bindtap="adjustAmount" hover-class="tap-pressed" hover-stay-time="100">＋</view>
+        </view>
+        <view class="remove-button" data-key="{{item.key}}" bindtap="removeIngredient" hover-class="tap-pressed" hover-stay-time="100">×</view>
+      </view>
+    </view>
+  </view>
+
+  <button class="primary-button find-button" bindtap="findRecipes">看看能做什么</button>
+
+  <view class="recommendations" wx:if="{{hasRecommended}}">
+    <view class="result-heading">
+      <text>推荐结果</text>
+      <text>可做菜较少时，已用缺料最少的菜补足</text>
+    </view>
+
+    <view class="result-list">
+      <view wx:for="{{recommendations}}" wx:key="id" class="result-card" data-id="{{item.id}}" bindtap="openRecipe" hover-class="tap-pressed" hover-stay-time="100">
+        <image src="{{item.displayImage || item.image}}" mode="aspectFill" lazy-load="{{true}}" />
+        <view class="result-copy">
+          <view class="result-title-line">
+            <text class="result-name">{{item.name}}</text>
+            <text class="result-status {{item.canCook ? 'ready' : 'near'}}">{{item.canCook ? '可以烹饪' : '接近可做'}}</text>
+          </view>
+          <text class="result-subtitle">{{item.subtitle}}</text>
+          <text wx:if="{{item.canCook}}" class="ready-note">主要食材及数量均已满足</text>
+          <text wx:else class="missing-note">还缺：{{item.missingText}}</text>
+          <text wx:if="{{item.allergyWarning}}" class="result-allergy">过敏原警示：{{item.allergyWarning}}</text>
+        </view>
+        <text class="chevron">›</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<page-tutorial id="page-guide" page-key="{{tutorialKey}}" steps="{{tutorialSteps}}" />

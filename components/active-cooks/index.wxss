@@ -1,0 +1,12 @@
+.active-cooks { position:fixed; right:22rpx; z-index:880; width:330rpx; }
+.active-trigger { display:flex; align-items:center; gap:10rpx; height:68rpx; padding:0 18rpx; border:2rpx solid rgba(255,255,255,.8); border-radius:35rpx; color:#fff; background:#ff946d; box-shadow:0 12rpx 30rpx rgba(255,148,109,.26); font-size:21rpx; }
+.active-trigger text:nth-child(2) { flex:1; font-weight:700; }.active-trigger text:last-child { color:#d8e6e0; font-size:18rpx; }
+.active-dot { width:13rpx; height:13rpx; flex:none; border-radius:50%; background:#ffd66b; box-shadow:0 0 0 6rpx rgba(255,214,107,.24); }
+.cook-list { margin-bottom:10rpx; overflow:hidden; border:2rpx solid #e1d7c9; border-radius:24rpx; background:#fffdf9; box-shadow:0 18rpx 42rpx rgba(64,47,30,.18); }
+.cook-option { display:flex; align-items:center; min-height:82rpx; padding:10rpx 12rpx; border-bottom:1rpx solid #eee6da; }.cook-option:last-child { border-bottom:0; }
+.cook-option image { width:58rpx; height:58rpx; flex:none; border-radius:16rpx; }.cook-option > view { flex:1; min-width:0; margin-left:12rpx; }
+.cook-option > view text { display:block; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }.cook-option > view text:first-child { color:#302d27; font-size:21rpx; font-weight:700; }.cook-option > view text:last-child { margin-top:4rpx; color:#a15a3e; font-size:17rpx; }
+.cook-arrow { color:#a99b89; font-size:34rpx; }
+.tap-pressed { opacity:.7; transform:scale(.98); }
+.active-trigger { border:3rpx solid #fff3dc; background:linear-gradient(135deg,#ffad86,#ff8a62); box-shadow:0 6rpx 0 #d96b49,0 15rpx 30rpx rgba(255,148,109,.3); }
+.cook-list { border:3rpx solid #f1c98b; background:linear-gradient(135deg,#fff,#fff7df); box-shadow:0 8rpx 0 #ecd6af,0 20rpx 46rpx rgba(75,47,30,.2); }

@@ -1,0 +1,12 @@
+<view class="nutrition-card" wx:if="{{nutrition}}">
+  <view class="nutrition-title-row"><image src="/assets/icons/illustrated/nutrition.png" mode="aspectFit" /><text class="nutrition-title">{{title}} · {{nutrition.servings}}人份</text></view>
+  <text class="nutrition-status">{{nutrition.partial ? '部分食材营养小计（非整道菜总量）' : '配方估算'}} · {{nutrition.available ? '仅供参考' : '数据待补充'}}</text>
+  <view class="nutrition-grid" wx:if="{{nutrition.available}}">
+    <view><text>{{nutrition.protein === null ? '待补充' : nutrition.protein + 'g'}}</text><text>蛋白质</text></view>
+    <view><text>{{nutrition.fat === null ? '待补充' : nutrition.fat + 'g'}}</text><text>脂肪</text></view>
+    <view><text>{{nutrition.carbs === null ? '待补充' : nutrition.carbs + 'g'}}</text><text>碳水化合物</text></view>
+    <view><text>{{nutrition.fiber === null ? '待补充' : nutrition.fiber + 'g'}}</text><text>膳食纤维</text></view>
+  </view>
+  <text class="nutrition-note">{{nutrition.note}}</text>
+  <button class="nutrition-source" bindtap="showSources">查看数据来源与用量依据</button>
+</view>

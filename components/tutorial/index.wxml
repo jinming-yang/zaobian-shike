@@ -1,0 +1,9 @@
+<view wx:if="{{visible}}" class="guide-mask" catchtap="noop" catchtouchmove="noop">
+  <view class="guide-card">
+    <image class="guide-mascot mascot-bob" src="/assets/characters/xiaozao-welcome.png" mode="aspectFit" />
+    <text class="guide-count">使用教程 {{index + 1}} / {{steps.length}}</text>
+    <text class="guide-title">{{current[0]}}</text>
+    <text class="guide-body">{{current[1]}}</text>
+    <view class="guide-actions"><button bindtap="skip">跳过全部教程</button><button class="guide-next" bindtap="next">{{index + 1 === steps.length ? '知道了' : '下一条'}}</button></view>
+  </view>
+</view>

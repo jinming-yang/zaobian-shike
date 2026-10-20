@@ -1,0 +1,122 @@
+<view wx:if="{{recipe}}" class="page-shell prep-page safe-bottom">
+  <active-cooks bottom-offset="180" />
+  <view class="prep-header">
+    <image class="illustration-card-bg" src="/assets/illustrations/banner-pantry-v2.jpg" mode="aspectFill" />
+    <view class="prep-copy"><text class="step-kicker">备菜准备</text>
+    <text class="prep-title">先把一切准备好</text>
+    <text class="prep-subtitle">{{recipe.name}} · 默认配方为 {{recipe.baseServings}} 人份</text></view>
+  </view>
+
+  <view class="serving-card">
+    <view>
+      <text class="serving-label">就餐人数</text>
+      <text class="serving-note">用量将自动调整</text>
+    </view>
+    <view class="serving-control">
+      <button data-delta="-1" bindtap="changeServings" disabled="{{servings <= 1}}">−</button>
+      <text>{{servings}}<text> 人</text></text>
+      <button data-delta="1" bindtap="changeServings" disabled="{{servings >= 8}}">＋</button>
+    </view>
+  </view>
+
+  <view class="amount-note">
+    <text>提示</text>
+    <text>以下为常用参考量，食材大小、实际购买量和个人口味不同，请按现场情况微调。</text>
+  </view>
+
+  <view class="shopping-add-actions">
+    <button class="shopping-add-button" bindtap="addMainIngredientsToShoppingList">将食材加入采购清单</button>
+    <button class="shopping-add-button" bindtap="addToShoppingList">将食材和调味料加入采购清单</button>
+  </view>
+
+  <view class="ingredient-section">
+    <view class="section-title"><text>01</text><text>主要食材</text></view>
+    <view class="ingredient-list">
+      <view wx:for="{{mainIngredients}}" wx:key="name" class="ingredient-row main-ingredient-row">
+        <ingredient-image name="{{item.name}}" />
+        <text class="ingredient-name">{{item.name}}</text>
+        <view class="ingredient-amount-block main-amount-block">
+          <text class="ingredient-amount">{{item.displayAmount}}</text>
+          <text wx:if="{{item.amountHint}}" class="ingredient-amount-hint">{{item.amountHint}}</text>
+        </view>
+        <view class="ingredient-button-gap"></view>
+        <button class="ingredient-add" data-index="{{index}}" catchtap="addMainIngredient">加入采购清单</button>
+      </view>
+    </view>
+    <view class="shortage-entry" bindtap="openMissingPicker" hover-class="tap-pressed" hover-stay-time="100">
+      <view class="shortage-entry-icon">?</view>
+      <view class="shortage-entry-copy">
+        <text>缺少某几样，看看能做啥</text>
+        <text>选择暂时没有的主要食材，为你推荐其他菜</text>
+      </view>
+      <text class="shortage-entry-arrow">›</text>
+    </view>
+  </view>
+
+  <view class="shortage-results" wx:if="{{shortageHasRecommended}}">
+    <view class="shortage-result-heading">
+      <text>换一道也能做好</text>
+      <text>已排除当前这道 {{recipe.name}}</text>
+    </view>
+    <view class="shortage-result-card" wx:for="{{shortageRecommendations}}" wx:key="id" data-id="{{item.id}}" bindtap="openRecommendedRecipe" hover-class="tap-pressed" hover-stay-time="100">
+      <image src="{{item.displayImage || item.image}}" mode="aspectFill" lazy-load="{{true}}" />
+      <view>
+        <view><text>{{item.name}}</text><text class="{{item.canCook ? 'ready' : 'near'}}">{{item.canCook ? '可以做' : '差一点'}}</text></view>
+        <text>{{item.suggestionText}}</text>
+        <text wx:if="{{item.allergyWarning}}" class="shortage-allergy">过敏原警示：{{item.allergyWarning}}</text>
+      </view>
+      <text>›</text>
+    </view>
+  </view>
+
+  <view class="ingredient-section">
+    <view class="section-title"><text>02</text><text>调味料</text></view>
+    <view class="ingredient-list">
+      <view wx:for="{{seasoningIngredients}}" wx:key="name" class="ingredient-row seasoning-ingredient-row">
+        <ingredient-image name="{{item.name}}" />
+        <text class="ingredient-name">{{item.name}}</text>
+        <view class="ingredient-amount-block main-amount-block">
+          <text class="ingredient-amount">{{item.displayAmount}}</text>
+          <text wx:if="{{item.amountHint}}" class="ingredient-amount-hint">{{item.amountHint}}</text>
+        </view>
+        <view class="ingredient-button-gap"></view>
+        <button class="ingredient-add" data-index="{{index}}" catchtap="addSeasoningIngredient">加入采购清单</button>
+      </view>
+    </view>
+  </view>
+
+  <view class="preparation-section">
+    <view class="preparation-heading"><text>开火前，逐项处理</text><text>{{preparedCount}} / {{preparationItems.length}} 已备好</text></view>
+    <text class="preparation-intro">先清洗、去皮去根，再切配。洗好的菜沥干，生熟食材使用不同刀板。</text>
+    <view wx:for="{{preparationItems}}" wx:key="name" class="preparation-card {{item.ready ? 'prepared' : ''}}">
+      <view class="preparation-card-top"><ingredient-image name="{{item.name}}" size="{{76}}" /><text>{{item.name}}</text><button class="preparation-check" data-index="{{index}}" bindtap="togglePreparation">{{item.ready ? '✓ 已备好' : '标记备好'}}</button></view>
+      <text class="preparation-copy">{{item.preparation}}</text>
+      <text wx:if="{{item.recipeNote}}" class="preparation-recipe-note">本菜切配：{{item.recipeNote}}</text>
+    </view>
+  </view>
+
+  <view class="prep-bottom-action">
+    <button class="primary-button" bindtap="startCooking">食材已备好，开始烹饪</button>
+  </view>
+
+  <view class="missing-picker-mask" wx:if="{{showMissingPicker}}" catchtap="closeMissingPicker" hover-class="tap-pressed" hover-stay-time="100">
+    <view class="missing-picker" catchtap="noop" hover-class="tap-pressed" hover-stay-time="100">
+      <text class="missing-picker-title">缺少哪些主要食材？</text>
+      <text class="missing-picker-note">点击勾选暂时没有的食材</text>
+      <view class="missing-option-list">
+        <view class="missing-option {{item.isMissing ? 'selected' : ''}}" wx:for="{{missingOptions}}" wx:key="optionKey" data-key="{{item.optionKey}}" bindtap="toggleMissingIngredient" hover-class="tap-pressed" hover-stay-time="100">
+          <ingredient-image name="{{item.name}}" size="{{58}}" />
+          <text>{{item.name}}</text>
+          <text>{{item.displayAmount}}</text>
+          <view>{{item.isMissing ? '✓' : ''}}</view>
+        </view>
+      </view>
+      <view class="missing-picker-actions">
+        <button bindtap="closeMissingPicker">取消</button>
+        <button bindtap="confirmMissingIngredients">确认并推荐</button>
+      </view>
+    </view>
+  </view>
+</view>
+
+<page-tutorial id="page-guide" page-key="{{tutorialKey}}" steps="{{tutorialSteps}}" />

@@ -1,0 +1,4 @@
+{
+  "navigationBarTitleText": "开始备菜",
+  "usingComponents": { "active-cooks": "/components/active-cooks/index" }
+}

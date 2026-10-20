@@ -1,0 +1,23 @@
+<view class="page-shell shopping-page safe-bottom">
+  <active-cooks bottom-offset="30" />
+  <view class="shopping-summary">
+    <image class="illustration-card-bg" src="/assets/illustrations/card-profile-journal.jpg" mode="aspectFill" />
+    <image class="shopping-summary-art" src="/assets/stickers/v2/pot.png" mode="aspectFit" />
+    <image class="shopping-mint-art" src="/assets/stickers/v2/mint.png" mode="aspectFit" />
+    <view class="shopping-summary-copy">
+      <view><text class="shopping-summary-title">采购清单</text><text class="shopping-summary-count">{{pendingCount}} 项待采购 · 共 {{items.length}} 项</text></view>
+      <text class="shopping-summary-note">备菜页可一键加入，重复食材会自动合并数量。</text>
+    </view>
+  </view>
+  <view class="bulk-actions"><button bindtap="purchaseAll">全部已采购</button><button bindtap="deleteAll">全部删除</button></view>
+  <view wx:if="{{items.length}}" class="shopping-list">
+    <view wx:for="{{items}}" wx:key="id" class="shopping-row {{item.purchased ? 'purchased' : ''}}">
+      <ingredient-image name="{{item.name}}" />
+      <view class="item-copy"><view><text>{{item.name}}</text><text>{{item.amountText}}</text></view><text>来自：{{item.recipeText}}</text></view>
+      <view class="item-actions"><button class="purchased-button" data-id="{{item.id}}" bindtap="togglePurchased">{{item.purchased ? '取消已购' : '我已采购'}}</button><button class="delete-button" data-id="{{item.id}}" bindtap="deleteItem">删除</button></view>
+    </view>
+  </view>
+  <view wx:else class="shopping-empty"><image src="/assets/characters/danzai-reminder.png" mode="aspectFit" /><text>采购清单还是空的</text><text>进入一道菜的备菜页面，即可一键加入所需食材。</text></view>
+</view>
+
+<page-tutorial id="page-guide" page-key="{{tutorialKey}}" steps="{{tutorialSteps}}" />

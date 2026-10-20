@@ -1,0 +1,15 @@
+<view class="tab-bar">
+  <view class="tab-divider"></view>
+  <view class="tab-content">
+    <view
+      wx:for="{{tabs}}"
+      wx:key="pagePath"
+      class="tab-item {{selected === index ? 'tab-item-active' : ''}}"
+      data-index="{{index}}"
+      bindtap="switchTab"
+     hover-class="tap-pressed" hover-stay-time="100">
+       <image class="tab-art" src="{{index === 0 ? '/assets/stickers/v2/pot.png' : '/assets/stickers/v2/heart.png'}}" mode="aspectFit" />
+      <text class="tab-label">{{item.text}}</text>
+    </view>
+  </view>
+</view>

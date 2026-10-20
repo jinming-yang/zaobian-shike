@@ -1,0 +1,4 @@
+<view class="ingredient-picture" style="width:{{size}}rpx;height:{{size}}rpx;" bindtap="retryImage">
+  <image wx:if="{{source}}" src="{{source}}" mode="aspectFit" data-source="{{source}}" binderror="onImageError" />
+  <view wx:else class="picture-placeholder"><text>点击重试</text></view>
+</view>

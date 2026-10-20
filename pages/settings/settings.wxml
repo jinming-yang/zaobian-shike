@@ -1,0 +1,53 @@
+<view class="page-shell settings-page safe-bottom">
+  <active-cooks bottom-offset="30" />
+  <view class="settings-intro">
+    <image class="illustration-card-bg" src="/assets/illustrations/card-profile-journal.jpg" mode="aspectFill" />
+    <image class="settings-sticker" src="/assets/stickers/v2/heart.png" mode="aspectFit" />
+    <image class="settings-mascot" src="/assets/characters/danzai-reminder.png" mode="aspectFit" />
+    <view class="settings-intro-copy">
+      <text class="settings-intro-title">{{pageTitle}}</text>
+      <text class="settings-intro-note">{{pageNote}}</text>
+    </view>
+  </view>
+
+  <block wx:if="{{section === 'allergens'}}">
+  <view class="section-title"><text>忌口与过敏原</text><text>可多选</text></view>
+  <view class="chip-grid">
+    <view wx:for="{{allergenOptions}}" wx:key="name" class="chip {{item.active ? 'active' : ''}}" data-value="{{item.name}}" bindtap="toggleAllergen" hover-class="tap-pressed" hover-stay-time="100">{{item.name}}</view>
+  </view>
+
+  <view class="mode-list" wx:if="{{settings.allergens.length}}">
+    <view wx:for="{{modeOptions}}" wx:key="value" class="mode-row {{settings.allergyMode === item.value ? 'active' : ''}}" data-value="{{item.value}}" bindtap="selectAllergyMode" hover-class="tap-pressed" hover-stay-time="100">
+      <view class="radio"><view></view></view>
+      <view><text>{{item.label}}</text><text>{{item.note}}</text></view>
+    </view>
+  </view>
+
+  </block>
+  <block wx:if="{{section === 'tags'}}">
+  <view class="section-title"><text>个人标签</text><text>长期保存</text></view>
+  <view class="chip-grid">
+    <view wx:for="{{tagOptions}}" wx:key="name" class="chip tag {{item.active ? 'active' : ''}}" data-value="{{item.name}}" bindtap="toggleTag" hover-class="tap-pressed" hover-stay-time="100">{{item.name}}</view>
+  </view>
+
+  </block>
+  <block wx:if="{{section === 'general'}}">
+  <view class="section-title"><text>热量显示</text><text>按所选份数估算</text></view>
+  <view class="setting-card servings-card">
+    <view><text>默认显示份数</text><text>菜谱详情页以此份数计算热量</text></view>
+    <view class="stepper"><view data-delta="-1" bindtap="adjustServings" hover-class="tap-pressed" hover-stay-time="100">−</view><text>{{settings.calorieServings}} 人份</text><view data-delta="1" bindtap="adjustServings" hover-class="tap-pressed" hover-stay-time="100">＋</view></view>
+  </view>
+
+  <view class="section-title"><text>烹饪设置</text><text>开关立即生效</text></view>
+  <view class="setting-list">
+    <view class="setting-row"><view><text>显示热量卡片</text><text>显示估算千卡和慢跑时间</text></view><switch checked="{{settings.showCalories}}" color="#FF946D" data-key="showCalories" bindchange="changeSwitch" /></view>
+    <view class="setting-row"><view><text>烹饪时屏幕常亮</text><text>减少做菜时反复解锁</text></view><switch checked="{{settings.keepScreenOn}}" color="#FF946D" data-key="keepScreenOn" bindchange="changeSwitch" /></view>
+    <view class="setting-row"><view><text>计时结束声音</text><text>关闭后不播放提示音</text></view><switch checked="{{settings.timerSound}}" color="#FF946D" data-key="timerSound" bindchange="changeSwitch" /></view>
+    <view class="setting-row"><view><text>计时结束震动</text><text>关闭后不触发手机震动</text></view><switch checked="{{settings.vibration}}" color="#FF946D" data-key="vibration" bindchange="changeSwitch" /></view>
+    <view class="setting-row"><view><text>询问是否继续烹饪</text><text>存在未完成记录时显示选择框</text></view><switch checked="{{settings.resumePrompt}}" color="#FF946D" data-key="resumePrompt" bindchange="changeSwitch" /></view>
+  </view>
+  <button class="secondary-button" bindtap="replayTutorial">重新查看使用教程</button>
+  </block>
+</view>
+
+<page-tutorial id="page-guide" page-key="{{tutorialKey}}" steps="{{tutorialSteps}}" />

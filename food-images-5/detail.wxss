@@ -1,0 +1,255 @@
+.detail-page {
+  background: #fffaf2;
+  padding-bottom: calc(176rpx + env(safe-area-inset-bottom));
+}
+
+.detail-bottom-action {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  box-sizing: border-box;
+  padding: 18rpx 34rpx calc(24rpx + env(safe-area-inset-bottom));
+  background: rgba(255, 250, 242, 0.98);
+  box-shadow: 0 -6rpx 24rpx rgba(83, 61, 39, 0.08);
+}
+
+.detail-bottom-action .primary-button {
+  width: 100%;
+}
+
+.hero {
+  position: relative;
+  height: 610rpx;
+  overflow: hidden;
+  background: #ddd2c2;
+}
+
+.hero-blur {
+  position: absolute;
+  inset: -30rpx;
+  width: calc(100% + 60rpx);
+  height: calc(100% + 60rpx);
+  filter: blur(26rpx);
+  opacity: 0.62;
+  transform: scale(1.08);
+}
+
+.hero-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-fade {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 170rpx;
+  background: linear-gradient(transparent, #fffaf2);
+}
+
+.detail-content {
+  position: relative;
+  z-index: 2;
+  margin-top: -44rpx;
+  padding: 0 34rpx;
+}
+
+.back-button {
+  position: absolute;
+  left: 28rpx;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12rpx;
+  min-width: 190rpx;
+  height: 76rpx;
+  padding: 0 24rpx;
+  box-sizing: border-box;
+  border: 2rpx solid rgba(255, 255, 255, 0.36);
+  border-radius: 40rpx;
+  color: #fff;
+  background: #31584c;
+  box-shadow: 0 12rpx 28rpx rgba(49, 88, 76, 0.28);
+  font-size: 26rpx;
+  font-weight: 650;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.back-button text:first-child {
+  font-size: 36rpx;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.back-button-pressed {
+  opacity: 0.82;
+  transform: scale(0.97);
+}
+
+.title-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 24rpx 2rpx 32rpx;
+}
+
+.recipe-title,
+.recipe-subtitle {
+  display: block;
+}
+
+.recipe-title {
+  font-family: Georgia, "Songti SC", serif;
+  font-size: 56rpx;
+  font-weight: 700;
+}
+
+.recipe-subtitle {
+  margin-top: 10rpx;
+  color: #8c8071;
+  font-size: 25rpx;
+}
+
+.tag {
+  margin-top: 12rpx;
+  padding: 10rpx 18rpx;
+  border-radius: 24rpx;
+  color: #31584c;
+  background: #dfeae4;
+  font-size: 21rpx;
+}
+
+.title-actions { display:flex; flex-direction:column; align-items:flex-end; gap:10rpx; }
+.detail-star { display:flex; align-items:center; justify-content:center; width:58rpx; height:58rpx; border-radius:50%; color:#d6cec3; background:#fff; box-shadow:0 8rpx 22rpx rgba(83,61,39,.08); font-size:34rpx; }
+.detail-star.active { color:#f0b735; }
+
+.rating-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18rpx;
+}
+
+.rating-card {
+  padding: 26rpx 24rpx;
+  border-radius: 24rpx;
+  background: #fff;
+  box-shadow: 0 10rpx 34rpx rgba(83, 61, 39, 0.06);
+}
+
+.rating-label,
+.rating-caption {
+  display: block;
+}
+
+.rating-label {
+  color: #6d6357;
+  font-size: 23rpx;
+}
+
+.stars {
+  display: flex;
+  gap: 5rpx;
+  margin: 14rpx 0 10rpx;
+  color: #ded6cb;
+  font-size: 30rpx;
+}
+
+.stars .active {
+  color: #e8663d;
+}
+
+.rating-caption {
+  color: #9c9081;
+  font-size: 20rpx;
+}
+
+.time-card {
+  display: flex;
+  align-items: center;
+  margin: 20rpx 0;
+  padding: 24rpx;
+  border-radius: 24rpx;
+  background: #31584c;
+  color: #fff;
+}
+
+.clock-icon {
+  width: 76rpx;
+  height: 76rpx;
+  margin-right: 20rpx;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  text-align: center;
+  line-height: 76rpx;
+  font-size: 44rpx;
+}
+
+.time-card > view:nth-child(2) > text {
+  color: #cbd9d3;
+  font-size: 22rpx;
+}
+
+.time-number {
+  font-size: 46rpx;
+  font-weight: 700;
+}
+
+.time-unit {
+  font-size: 23rpx;
+}
+
+.time-note {
+  margin-left: auto;
+  color: #cbd9d3;
+  font-size: 20rpx;
+}
+
+.calorie-card { display:grid; grid-template-columns:1fr 1fr; gap:12rpx; margin:20rpx 0; padding:22rpx 24rpx; border-radius:24rpx; background:#fff; }
+.calorie-card view text { display:block; }.calorie-card view text:first-child { color:#b65337; font-size:25rpx; font-weight:700; }.calorie-card view text:last-child { margin-top:5rpx; color:#918575; font-size:18rpx; }
+.calorie-card > text { grid-column:1 / 3; padding-top:10rpx; border-top:1rpx solid #eee7dc; color:#9b9082; font-size:17rpx; line-height:1.5; }
+.allergy-warning { display:flex; flex-direction:column; gap:7rpx; margin-bottom:20rpx; padding:20rpx 22rpx; border-left:6rpx solid #c94630; border-radius:8rpx 20rpx 20rpx 8rpx; color:#873626; background:#fde3dc; font-size:21rpx; line-height:1.55; }
+.allergy-warning text:first-child { font-weight:750; }
+
+.safety-note {
+  display: flex;
+  flex-direction: column;
+  gap: 8rpx;
+  margin-bottom: 28rpx;
+  padding: 22rpx 24rpx;
+  border-left: 6rpx solid #d7a14d;
+  border-radius: 8rpx 20rpx 20rpx 8rpx;
+  background: #fff2d9;
+  color: #796342;
+  font-size: 22rpx;
+  line-height: 1.65;
+}
+
+.safety-title {
+  color: #7a4d1d;
+  font-weight: 700;
+}
+
+.source-note {
+  display: flex;
+  justify-content: space-between;
+  gap: 24rpx;
+  margin: -10rpx 4rpx 26rpx;
+  color: #978b7c;
+  font-size: 19rpx;
+  line-height: 1.5;
+}
+
+.source-note text:first-child {
+  flex: none;
+  color: #665e54;
+  font-weight: 650;
+}
+
+.source-note text:last-child {
+  text-align: right;
+}

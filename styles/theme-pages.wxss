@@ -1,0 +1,73 @@
+/* 奶油元气厨房：全页面语义覆盖层 */
+.detail-page,.prep-page,.shopping-page,.profile-page,.settings-page { background:var(--color-bg-page); color:var(--color-text-primary); }
+
+.title-block,.rating-card,.calorie-card,.serving-card,.ingredient-section,.preparation-card,.shortage-result-card,.shopping-row,.general-settings-entry,.preference-card>view,.report-card,.report-dishes,.favorite-card,.history-row,.empty-card,.chip,.mode-row,.setting-card,.setting-list {
+  border:2rpx solid var(--color-border); border-radius:24rpx; background:var(--color-bg-card); box-shadow:var(--shadow-card);
+}
+
+.detail-page .title-block { padding:24rpx; }
+.detail-page .tag { color:var(--color-brand-deep); background:var(--color-brand-soft); }
+.detail-page .stars .active,.detail-page .detail-star.active { color:var(--color-butter); }
+.detail-page .time-card { border:2rpx solid #e77b59; border-radius:24rpx; color:#623a2e; background:linear-gradient(135deg,#ffad89,#ff946d); }
+.detail-page .time-card>view:nth-child(2)>text,.detail-page .time-unit,.detail-page .time-note { color:#704234; font-weight:650; }
+.detail-page .time-number { color:#fffdf8; text-shadow:0 2rpx 0 rgba(142,65,42,.28); }
+.xiaozhao-tip { display:flex; align-items:center; min-height:92rpx; margin:18rpx 0; padding:10rpx 18rpx; border:2rpx solid #f1dca2; border-radius:24rpx; background:var(--color-butter-soft); color:var(--color-text-secondary); font-size:21rpx; line-height:1.5; }
+.xiaozhao-tip image { width:76rpx; height:88rpx; flex:none; margin-right:14rpx; }
+.detail-bottom-action,.prep-bottom-action { background:rgba(255,249,240,.98); }
+
+.prep-header { position:relative; display:flex; min-height:178rpx; padding:28rpx 186rpx 28rpx 28rpx; overflow:hidden; border:2rpx solid #f1dca2; border-radius:24rpx; background:linear-gradient(135deg,var(--color-butter-soft),#fff); box-shadow:var(--shadow-card); }
+.prep-header>view { min-width:0; }
+.prep-mascot { position:absolute; right:8rpx; bottom:-24rpx; width:184rpx; height:210rpx; }
+.prep-page .step-kicker { color:var(--color-brand-deep); }
+.prep-page .serving-card { background:linear-gradient(135deg,var(--color-mint-soft),#fff); }
+.prep-page .serving-label { color:var(--color-text-primary); }
+.prep-page .serving-note { color:var(--color-text-secondary); }
+.prep-page .serving-control { gap:4rpx; padding:5rpx; border:2rpx solid #efb39d; border-radius:40rpx; background:#fff5ef; }
+.prep-page .serving-control button { color:#a64f37; background:#ffe1d4; }
+.prep-page .serving-control>text { color:#65483d; }
+.prep-page .ingredient-add,.prep-page .shopping-add-button { border-color:var(--color-mint); color:var(--color-mint-deep); background:var(--color-mint-soft); }
+.prep-page .preparation-card.prepared { border-color:var(--color-mint); background:var(--color-mint-soft); }
+.prep-page .prepared .preparation-check { background:var(--color-mint-deep); }
+.prep-page .missing-picker { border:2rpx solid var(--color-border); background:var(--color-bg-page); }
+.prep-page .missing-picker-actions button:last-child { background:var(--color-brand); }
+
+.complete-page { background:radial-gradient(circle at 50% 22%,#fffdf4 0,var(--color-bg-page) 58%,#ffe9d8 100%); color:var(--color-text-primary); }
+.complete-mascots { display:flex; justify-content:center; align-items:flex-end; height:150rpx; margin-top:-54rpx; }
+.complete-mascots image:first-child { width:130rpx; height:170rpx; }
+.complete-mascots image:last-child { width:108rpx; height:120rpx; margin-left:-18rpx; }
+.complete-page .medal,.complete-back-button { background:var(--color-brand); box-shadow:var(--shadow-brand); }
+.complete-page .complete-kicker { color:var(--color-brand-deep); }
+.complete-page .dish-frame { border-radius:24rpx; border-color:#fff; box-shadow:var(--shadow-card); }
+.complete-page .weekly-result { color:var(--color-mint-deep); background:var(--color-mint-soft); }
+.complete-page .weekly-result text { color:var(--color-brand-deep); }
+
+.shopping-summary { border:2rpx solid #f1dca2; border-radius:24rpx; color:var(--color-text-primary); background:linear-gradient(135deg,var(--color-butter-soft),#fff); box-shadow:var(--shadow-card); }
+.shopping-summary>view text:last-child,.shopping-summary>text { color:var(--color-text-secondary); }
+.shopping-page .bulk-actions button { color:var(--color-mint-deep); background:var(--color-mint-soft); }
+.shopping-page .shopping-row.purchased { border-color:var(--color-mint); background:var(--color-mint-soft); }
+.shopping-page .purchased-button { color:var(--color-mint-deep); background:var(--color-mint-soft); }
+.shopping-page .delete-button { color:var(--color-danger); background:var(--color-danger-soft); }
+.shopping-empty image { width:190rpx; height:190rpx; }
+.shopping-empty text:nth-child(2) { color:var(--color-text-primary); }
+
+.profile-card { position:relative; overflow:hidden; border:2rpx solid #f1dca2; border-radius:24rpx; color:var(--color-text-primary); background:linear-gradient(135deg,var(--color-butter-soft),#fff); box-shadow:var(--shadow-card); }
+.profile-card .avatar { width:100rpx; height:112rpx; flex:none; border-radius:0; background:transparent; }
+.profile-card .profile-copy text:last-child { color:var(--color-text-secondary); }
+.profile-page .report-tabs { background:var(--color-brand-soft); }
+.profile-page .report-tabs .active { background:var(--color-brand); }
+.profile-page .report-number text:first-child { color:var(--color-brand-deep); }
+.profile-page .nutrient-tab { border-color:var(--color-mint); color:var(--color-mint-deep); background:var(--color-mint-soft); }
+.profile-page .nutrient-tab.active { border-color:var(--color-brand); background:var(--color-brand); }
+.profile-page .history-progress view { background:var(--color-brand); }
+.profile-page .done { color:var(--color-mint-deep); background:var(--color-mint-soft); }
+.profile-page .delete-history { color:var(--color-danger); background:var(--color-danger-soft); }
+
+.settings-intro { position:relative; min-height:126rpx; padding:28rpx 170rpx 28rpx 28rpx; overflow:hidden; border:2rpx solid #f1dca2; border-radius:24rpx; color:var(--color-text-primary); background:linear-gradient(135deg,var(--color-butter-soft),#fff); box-shadow:var(--shadow-card); }
+.settings-intro text:last-child { color:var(--color-text-secondary); }
+.settings-mascot { position:absolute; right:10rpx; bottom:-12rpx; width:160rpx; height:160rpx; }
+.settings-page .chip.active,.settings-page .chip.tag.active { border-color:var(--color-brand); background:var(--color-brand); }
+.settings-page .mode-row.active { border-color:var(--color-mint); background:var(--color-mint-soft); }
+.settings-page .mode-row.active .radio { border-color:var(--color-mint-deep); }
+.settings-page .mode-row.active .radio view { background:var(--color-mint-deep); }
+.settings-page .stepper { border-color:var(--color-border); }
+.settings-page .stepper view { color:var(--color-brand-deep); background:var(--color-brand-soft); }

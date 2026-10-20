@@ -1,0 +1,67 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/profile/profile",
+    "pages/settings/settings",
+    "pages/shopping/shopping",
+    "pages/pantry/pantry",
+    "pages/detail/detail",
+    "pages/prep/prep",
+    "pages/cook/cook",
+    "pages/complete/complete"
+  ],
+  "window": {
+    "navigationBarTitleText": "灶边食刻",
+    "navigationBarBackgroundColor": "#fff9f0",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#fff9f0",
+    "backgroundTextStyle": "dark"
+  },
+  "tabBar": {
+    "custom": true,
+    "color": "#7f6d62",
+    "selectedColor": "#ff946d",
+    "backgroundColor": "#fff9f0",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "主页"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "我的"
+      }
+    ]
+  },
+  "style": "v2",
+  "subPackages": [
+    { "name": "food-images-1", "root": "food-images-1", "pages": ["resource", "detail", "complete"] },
+    { "name": "food-images-2", "root": "food-images-2", "pages": ["resource", "detail", "complete"] },
+    { "name": "food-images-3", "root": "food-images-3", "pages": ["resource", "detail", "complete"] },
+    { "name": "food-images-4", "root": "food-images-4", "pages": ["resource", "detail", "complete"] },
+    { "name": "food-images-5", "root": "food-images-5", "pages": ["resource", "detail", "complete"] },
+    { "name": "food-images-6", "root": "food-images-6", "pages": ["resource", "detail", "complete"] },
+    { "name": "food-images-7", "root": "food-images-7", "pages": ["resource", "detail", "complete"] },
+    { "name": "food-images-8", "root": "food-images-8", "pages": ["resource", "detail", "complete"] },
+    { "name": "step-images-1", "root": "step-images-1", "pages": ["resource"] },
+    { "name": "step-images-2", "root": "step-images-2", "pages": ["resource"] },
+    { "name": "step-images-3", "root": "step-images-3", "pages": ["resource"] },
+    { "name": "step-images-4", "root": "step-images-4", "pages": ["resource"] },
+    { "name": "step-images-5", "root": "step-images-5", "pages": ["resource"] },
+    { "name": "step-images-6", "root": "step-images-6", "pages": ["resource"] },
+    { "name": "step-images-7", "root": "step-images-7", "pages": ["resource"] },
+    { "name": "step-images-8", "root": "step-images-8", "pages": ["resource"] },
+    { "name": "step-images-9", "root": "step-images-9", "pages": ["resource"] },
+    { "name": "step-images-10", "root": "step-images-10", "pages": ["resource"] },
+    { "name": "step-images-11", "root": "step-images-11", "pages": ["resource"] },
+    { "name": "step-images-12", "root": "step-images-12", "pages": ["resource"] }
+  ],
+  "usingComponents": {
+    "ingredient-image": "/components/ingredient-image/index",
+    "page-tutorial": "/components/tutorial/index",
+    "nutrition-card": "/components/nutrition-card/index"
+  },
+  "lazyCodeLoading": "requiredComponents",
+  "sitemapLocation": "sitemap.json"
+}

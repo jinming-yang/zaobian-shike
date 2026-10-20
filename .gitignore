@@ -1,0 +1,30 @@
+# Local tools, caches and personal editor settings
+/.codex/
+/.pdf_tools/
+/.idea/
+/.vscode/
+node_modules/
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+/project.private.config.json
+
+# Credentials and local environment configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Generated assets, old versions, delivery archives and competition documents
+/tmp/
+/ingredient-images/
+/程序说明/
+/docs/UI-backups/
+/docs/UI设计素材/
+*.zip
+*.7z
+*.rar
+*.docx
+*.pdf

@@ -1,0 +1,81 @@
+<view wx:if="{{recipe && step}}" class="page-shell cook-page">
+  <active-cooks current-id="{{recipe.id}}" bottom-offset="250" />
+  <view class="cook-topbar">
+    <view class="close-button" bindtap="goBack" hover-class="tap-pressed" hover-stay-time="100">×</view>
+    <view class="progress-copy">
+      <text>{{recipe.name}}</text>
+      <text>第 {{stepIndex + 1}} / {{totalSteps}} 步</text>
+    </view>
+    <view class="progress-number">{{stepIndex + 1}}</view>
+  </view>
+  <view class="progress-track"><view style="width: {{progress}}%"></view></view>
+
+  <scroll-view scroll-y class="step-scroll">
+    <view class="step-content">
+      <image class="step-sticker" src="/assets/stickers/v2/spatula.png" mode="aspectFit" />
+      <image wx:if="{{stepImage}}" class="step-image" src="{{stepImage}}" mode="aspectFit" data-path="{{stepImage}}" binderror="onStepImageError" bindtap="previewStepImage" />
+      <view wx:else class="step-image-placeholder">
+        <text>{{stepImageLoading ? '正在加载本步示意图' : '示意图暂未加载，请先参照下方步骤说明'}}</text>
+        <button wx:if="{{!stepImageLoading}}" class="image-retry-button" bindtap="loadStepPicture">重新加载配图</button>
+      </view>
+      <view wx:if="{{stepImage}}" class="step-image-caption">操作示意 · 点击可放大，具体用量和火候以步骤说明为准</view>
+      <view class="step-label">STEP {{stepIndex + 1}}</view>
+      <text class="step-title">{{step.title}}</text>
+      <text class="step-text">{{step.text}}</text>
+
+      <view wx:if="{{sequenceGuidance}}" class="sequence-guide">
+        <text class="sequence-guide-title">{{sequenceGuidance.title}}</text>
+        <text class="sequence-guide-order">{{sequenceGuidance.order}}</text>
+        <text class="sequence-guide-note">{{sequenceGuidance.note}}</text>
+      </view>
+
+      <view wx:if="{{heatGuidance}}" class="heat-guide">
+        <text class="heat-guide-label">新手观察点</text>
+        <text class="heat-guide-title">{{heatGuidance.title}}</text>
+        <view wx:for="{{heatGuidance.cues}}" wx:key="*this" class="heat-guide-cue"><text class="heat-guide-dot">•</text><text>{{item}}</text></view>
+        <text class="heat-guide-warning">{{heatGuidance.warning}}</text>
+      </view>
+
+      <view wx:if="{{step.timerSeconds > 0}}" class="timer-card {{timerStatus}}">
+        <image wx:if="{{timerStatus === 'running' || timerStatus === 'done'}}" class="timer-mascot" src="/assets/characters/danzai-reminder.png" mode="aspectFit" />
+        <text class="timer-eyebrow">本步骤计时</text>
+        <text class="timer-value">{{formattedTime}}</text>
+        <view class="timer-status">
+          <text wx:if="{{timerStatus === 'idle'}}">准备好后再开始</text>
+          <text wx:elif="{{timerStatus === 'running'}}"><text class="pulse"></text>正在计时，请留意火候</text>
+          <text wx:elif="{{timerStatus === 'paused'}}">计时已暂停</text>
+          <text wx:else>✓ 时间到</text>
+        </view>
+        <button class="timer-button" disabled="{{timerStatus === 'done' || cookingEnded}}" bindtap="toggleTimer">{{timerButtonText}}</button>
+      </view>
+    </view>
+  </scroll-view>
+
+  <view class="bottom-action safe-bottom">
+    <button class="parallel-button" disabled="{{cookingEnded}}" bindtap="startAnotherDish">＋ 同时做另一道菜</button>
+    <view class="step-actions">
+      <button class="previous-button" disabled="{{stepIndex === 0 || cookingEnded}}" bindtap="previousStep">上一步</button>
+      <button class="primary-button" disabled="{{cookingEnded}}" bindtap="nextStep">{{isLastStep ? '烹饪结束' : '已完成，下一步'}}</button>
+    </view>
+  </view>
+</view>
+
+<view wx:if="{{showExitDialog}}" class="exit-dialog-mask" catchtap="continueCooking" catchtouchmove="noop">
+  <view class="exit-dialog-card" aria-label="退出烹饪" catchtap="noop">
+    <text class="exit-dialog-title">退出烹饪？</text>
+    <text class="exit-dialog-note">保留进度退出：保存当前步骤，正在运行的计时继续提醒。</text>
+    <text class="exit-dialog-note">结束并退出：停止本次计时并清除当前进度，不计入完成记录。</text>
+    <view class="exit-dialog-actions">
+      <button class="exit-dialog-button exit-continue" bindtap="continueCooking">继续烹饪</button>
+      <button class="exit-dialog-button exit-save" bindtap="keepProgressAndExit">保留进度退出</button>
+      <button class="exit-dialog-button exit-end" bindtap="endCookingAndExit">结束并退出</button>
+    </view>
+  </view>
+</view>
+
+<view wx:if="{{redirecting}}" class="cook-loading">
+  <text>{{redirectError ? '烹饪页面暂未加载，请重试' : '正在加载烹饪步骤与配图…'}}</text>
+  <button wx:if="{{redirectError}}" class="primary-button" bindtap="retryLoad">重新加载</button>
+  <button class="parallel-button" bindtap="goHome">返回主页</button>
+</view>
+<page-tutorial wx:if="{{recipe && step}}" id="page-guide" page-key="{{tutorialKey}}" steps="{{tutorialSteps}}" />

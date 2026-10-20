@@ -1,0 +1,41 @@
+page {
+  --color-bg-page: #fff9f0;
+  --color-bg-card: #ffffff;
+  --color-bg-raised: #fffdf9;
+  --color-brand: #ff946d;
+  --color-brand-pressed: #ed805b;
+  --color-brand-deep: #a94f35;
+  --color-brand-soft: #fff0e9;
+  --color-butter: #ffd66b;
+  --color-butter-soft: #fff6d8;
+  --color-mint: #9edbc3;
+  --color-mint-deep: #397562;
+  --color-mint-soft: #e8f7f0;
+  --color-strawberry: #ffb6c1;
+  --color-text-primary: #59483f;
+  --color-text-secondary: #7f6d62;
+  --color-text-muted: #a09085;
+  --color-border: #f0dfd4;
+  --color-divider: #f4e8df;
+  --color-danger: #b94f3b;
+  --color-danger-soft: #ffebe5;
+  --radius-sm: 16rpx;
+  --radius-md: 20rpx;
+  --radius-lg: 24rpx;
+  --shadow-card: 0 10rpx 30rpx rgba(120, 78, 52, .08);
+  --shadow-brand: 0 14rpx 30rpx rgba(255, 148, 109, .25);
+}
+
+.cream-card {
+  border: 2rpx solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-bg-card);
+  box-shadow: var(--shadow-card);
+}
+
+.mascot-bob { animation: mascot-bob 2.8s ease-in-out infinite; }
+@keyframes mascot-bob { 50% { transform: translateY(-6rpx) rotate(1deg); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .mascot-bob { animation: none; }
+}

@@ -1,0 +1,945 @@
+{
+  "recipes": 120,
+  "ingredientNames": 187,
+  "ingredientPhotos": 142,
+  "newPhotos": 80,
+  "heatHints": 140,
+  "preparationCoverage": true,
+  "ingredients": [
+    {
+      "name": "番茄",
+      "image": "/assets/images/ingredients/tomato.jpg",
+      "preparation": "流水洗净，去蒂和硬芯。炒菜切块，沙拉切小块；切法以本菜说明为准。"
+    },
+    {
+      "name": "鸡蛋",
+      "image": "/assets/images/ingredients/egg.jpg",
+      "preparation": "使用无裂纹鸡蛋，打入干净小碗后检查，再打散或按步骤煮熟。接触蛋壳后洗手。"
+    },
+    {
+      "name": "小葱",
+      "image": "/assets/images/ingredients/scallion.jpg",
+      "preparation": "切去带泥须根，剥除枯黄外叶，流水冲净后沥干；按本菜切段或切葱花。"
+    },
+    {
+      "name": "食用油",
+      "image": "/assets/images/ingredients/oil.jpg",
+      "preparation": "按人数量取用油；锅和食材表面先擦干，不向热油中滴水试温。"
+    },
+    {
+      "name": "盐",
+      "image": "/assets/images/ingredients/salt.jpg",
+      "preparation": "按用量备好，酱油、蚝油等也含盐，最终调味前先尝味。"
+    },
+    {
+      "name": "白糖（可选）",
+      "image": "/assets/images/ingredients/sugar.jpg",
+      "preparation": "按配方量取；标注可选时可以不加。"
+    },
+    {
+      "name": "土豆",
+      "image": "/assets/images/ingredients/potato.jpg",
+      "preparation": "流水洗去泥，削皮并去芽眼；明显发绿、发芽或腐烂的土豆不用。切后先放清水中防变色，下锅前沥干。"
+    },
+    {
+      "name": "青椒",
+      "image": "/assets/images/ingredients/pepper.jpg",
+      "preparation": "洗净，去蒂、籽和内部白筋，沥干；按菜谱切丝或切块。"
+    },
+    {
+      "name": "大蒜",
+      "image": "/assets/images/ingredients/garlic.jpg",
+      "preparation": "剥去外皮，切除底部硬根，按步骤拍碎、切片或剁末。"
+    },
+    {
+      "name": "米醋",
+      "image": "/assets/images/ingredients/vinegar.jpg",
+      "preparation": "按配方量取备用，醋的品种以菜谱为准。"
+    },
+    {
+      "name": "鸡中翅",
+      "image": "/assets/images/ingredients/chicken-wing.jpg",
+      "preparation": "冷藏解冻后检查表面，厨房纸吸干，必要时两面浅划口；生鸡不在水龙头下冲洗。"
+    },
+    {
+      "name": "可乐",
+      "image": "/assets/images/ingredients/cola.jpg",
+      "preparation": "量取备用，不用零糖可乐替代需要糖分收汁的配方。"
+    },
+    {
+      "name": "姜",
+      "image": "/assets/images/ingredients/ginger.jpg",
+      "preparation": "洗去泥，刮除老皮和干硬处；按步骤切片、切丝或剁成姜蓉。"
+    },
+    {
+      "name": "生抽",
+      "image": "/assets/images/ingredients/soy-sauce.jpg",
+      "preparation": "分别量取，生抽调味、老抽上色，勿互相等量替换。"
+    },
+    {
+      "name": "新鲜香草（可选）",
+      "image": "/assets/images/ingredients/herbs.jpg",
+      "preparation": "去根和黄叶，流水洗净泥沙，沥干；摘叶或切碎，临出锅再加入。"
+    },
+    {
+      "name": "无盐黄油",
+      "image": "/assets/images/ingredients/butter.jpg",
+      "preparation": "按用量切小块；需要软化时提前取出，煎炒时用小火避免焦黑。"
+    },
+    {
+      "name": "黑胡椒",
+      "image": "/assets/images/ingredients/black-pepper.jpg",
+      "preparation": "按量备好，整粒胡椒使用前现磨更香。"
+    },
+    {
+      "name": "牛肉末",
+      "image": "/assets/images/ingredients/beef-mince.jpg",
+      "preparation": "冷藏解冻，倒去多余汁液，使用前保持冷藏；不冲洗，烹调时炒散并完全加热。"
+    },
+    {
+      "name": "意大利面",
+      "image": "/assets/images/ingredients/spaghetti.jpg",
+      "preparation": "按人数称量，查看包装煮制时间；干意面不需提前浸泡或清洗。"
+    },
+    {
+      "name": "洋葱",
+      "image": "/assets/images/ingredients/onion.jpg",
+      "preparation": "剥去干外皮，切去根端和顶端，冲净后切丝或丁。"
+    },
+    {
+      "name": "胡萝卜",
+      "image": "/assets/images/ingredients/carrot.jpg",
+      "preparation": "洗去泥沙，削去脏污老皮，切掉顶端和尾端，再按步骤切块、丁或丝。"
+    },
+    {
+      "name": "西芹",
+      "image": "/assets/images/ingredients/celery.jpg",
+      "preparation": "去根、叶和老硬部分，逐根洗净；粗纤维可从切口撕去，再切段。"
+    },
+    {
+      "name": "番茄泥",
+      "image": "/assets/images/ingredients/tomato-puree.jpg",
+      "preparation": "检查包装和保质期，按菜谱品种量取；浓缩番茄膏不等量替代番茄泥。"
+    },
+    {
+      "name": "橄榄油",
+      "image": "/assets/images/ingredients/oil.jpg",
+      "preparation": "按人数量取用油；锅和食材表面先擦干，不向热油中滴水试温。"
+    },
+    {
+      "name": "帕玛森奶酪（可选）",
+      "image": "/assets/images/ingredients/parmesan.jpg",
+      "preparation": "按量刨碎或磨细备用，外层硬皮按包装说明处理。"
+    },
+    {
+      "name": "三文鱼排",
+      "image": "/assets/images/ingredients/salmon.jpg",
+      "preparation": "冷藏解冻后吸干水分，摸查并拔去残余鱼刺；鱼皮保留与否按菜谱。"
+    },
+    {
+      "name": "芦笋",
+      "image": "/assets/images/ingredients/asparagus.jpg",
+      "preparation": "洗净，切去底部干硬部分，粗老茎下半段削去硬皮，再切段。"
+    },
+    {
+      "name": "西兰花",
+      "image": "/assets/images/ingredients/broccoli.jpg",
+      "preparation": "去粗老根，分切成大小接近的小朵，流水冲净花球缝隙；嫩茎可削皮切片。"
+    },
+    {
+      "name": "柠檬",
+      "image": "/assets/images/ingredients/lemon.jpg",
+      "preparation": "流水洗净擦干，切开挤汁并滤去籽；取皮屑时只刨黄色表皮。"
+    },
+    {
+      "name": "黄油（可选）",
+      "image": "/assets/images/ingredients/butter.jpg",
+      "preparation": "按用量切小块；需要软化时提前取出，煎炒时用小火避免焦黑。"
+    },
+    {
+      "name": "去骨鸡腿肉",
+      "image": "/assets/images/ingredients/chicken.jpg",
+      "preparation": "冷藏解冻，检查碎骨，去多余脂肪，厨房纸吸干后切块；生鸡不在水龙头下冲洗。"
+    },
+    {
+      "name": "熟花生米",
+      "image": "/assets/images/ingredients/peanuts.jpg",
+      "preparation": "确认已熟且无霉变，按步骤保留整粒或压碎；注意花生过敏。"
+    },
+    {
+      "name": "干辣椒",
+      "image": "/assets/images/ingredients/dried-chili.jpg",
+      "preparation": "拣去发霉椒和椒梗，剪段，按口味去籽；小火炒香避免变黑。"
+    },
+    {
+      "name": "葱",
+      "image": "/assets/images/ingredients/scallion.jpg",
+      "preparation": "切去带泥须根，剥除枯黄外叶，流水冲净后沥干；按本菜切段或切葱花。"
+    },
+    {
+      "name": "绍兴酒",
+      "image": "/assets/images/ingredients/cooking-wine.jpg",
+      "preparation": "按配方量取备用，不以白酒等量替代。"
+    },
+    {
+      "name": "白糖",
+      "image": "/assets/images/ingredients/sugar.jpg",
+      "preparation": "按配方量取；标注可选时可以不加。"
+    },
+    {
+      "name": "玉米淀粉",
+      "image": "/assets/images/ingredients/cornstarch.jpg",
+      "preparation": "腌肉时按量加入；勾芡先与凉水调匀，临下锅前再次搅匀。"
+    },
+    {
+      "name": "花椒",
+      "image": "/assets/images/ingredients/sichuan-pepper.jpg",
+      "preparation": "整粒花椒拣去硬梗和杂质，花椒粉量取备用；小火炒香，避免炒黑。"
+    },
+    {
+      "name": "嫩豆腐",
+      "image": "/assets/images/ingredients/tofu.jpg",
+      "preparation": "倒去包装水，检查异味，轻轻冲净后沥干，用刀切块，避免挤碎。"
+    },
+    {
+      "name": "猪肉末",
+      "image": "/assets/images/ingredients/pork-mince.jpg",
+      "preparation": "冷藏解冻，倒去多余汁液，使用前保持冷藏；不冲洗，烹调时炒散并完全加热。"
+    },
+    {
+      "name": "郫县豆瓣酱",
+      "image": "/assets/images/ingredients/doubanjiang.jpg",
+      "preparation": "量取后可剁细，含盐较多；炒时小火观察红油，不要炒焦。"
+    },
+    {
+      "name": "蒜",
+      "image": "/assets/images/ingredients/garlic.jpg",
+      "preparation": "剥去外皮，切除底部硬根，按步骤拍碎、切片或剁末。"
+    },
+    {
+      "name": "花椒粉",
+      "image": "/assets/images/ingredients/sichuan-pepper.jpg",
+      "preparation": "整粒花椒拣去硬梗和杂质，花椒粉量取备用；小火炒香，避免炒黑。"
+    },
+    {
+      "name": "香油",
+      "image": "/assets/images/ingredients/sesame-oil.jpg",
+      "preparation": "少量量取，通常用于出锅调香，不替代大量炸油。"
+    },
+    {
+      "name": "猪里脊",
+      "image": "/assets/images/ingredients/pork.jpg",
+      "preparation": "冷藏解冻，厨房纸吸干，去筋膜；逆纹切薄片或细丝，按本菜腌制。生熟刀板分开。"
+    },
+    {
+      "name": "水发木耳",
+      "image": "/assets/images/ingredients/wood-ear.jpg",
+      "preparation": "检查无异味和黏滑，去硬根，逐朵洗净后撕小块；泡发后及时烹调，不常温久放。"
+    },
+    {
+      "name": "笋",
+      "image": "/assets/images/ingredients/bamboo-shoots.jpg",
+      "preparation": "按购买状态去壳和老硬根，洗净；鲜笋先煮透后使用，已熟笋按包装处理。"
+    },
+    {
+      "name": "青红椒",
+      "image": "/assets/images/ingredients/mixed-peppers.jpg",
+      "preparation": "洗净后去蒂、籽和白筋，再切丝或小块；不同颜色椒分别处理。"
+    },
+    {
+      "name": "带皮五花肉",
+      "image": "/assets/images/ingredients/pork-belly.jpg",
+      "preparation": "冷藏解冻，检查皮上残毛并处理，吸干后按菜谱切块或先煮后切；生熟刀板分开。"
+    },
+    {
+      "name": "冰糖",
+      "image": "/assets/images/ingredients/rock-sugar.jpg",
+      "preparation": "选小块冰糖或轻敲成小块，量取备用；炒糖色时用小火，避免焦黑。"
+    },
+    {
+      "name": "老抽",
+      "image": "/assets/images/ingredients/soy-sauce.jpg",
+      "preparation": "分别量取，生抽调味、老抽上色，勿互相等量替换。"
+    },
+    {
+      "name": "彩椒",
+      "image": "/assets/images/ingredients/mixed-peppers.jpg",
+      "preparation": "洗净后去蒂、籽和白筋，再切丝或小块；不同颜色椒分别处理。"
+    },
+    {
+      "name": "菠萝块",
+      "image": "/assets/images/ingredients/pineapple.jpg",
+      "preparation": "鲜菠萝去皮、芽眼和硬芯后切块；罐装菠萝先沥汁。"
+    },
+    {
+      "name": "番茄酱",
+      "image": "/assets/images/ingredients/tomato-puree.jpg",
+      "preparation": "检查包装和保质期，按菜谱品种量取；浓缩番茄膏不等量替代番茄泥。"
+    },
+    {
+      "name": "炸制用油",
+      "image": "/assets/images/ingredients/oil.jpg",
+      "preparation": "按人数量取用油；锅和食材表面先擦干，不向热油中滴水试温。"
+    },
+    {
+      "name": "冷藏熟米饭",
+      "image": "/assets/images/ingredients/rice.jpg",
+      "preparation": "确认是及时冷藏、保存良好的熟饭，用干净勺拨散，炒饭时彻底热透。"
+    },
+    {
+      "name": "青豆",
+      "image": "/assets/images/ingredients/peas.jpg",
+      "preparation": "鲜豆剥荚冲净，冷冻青豆按包装处理，使用前检查有无冰块结团。"
+    },
+    {
+      "name": "白胡椒",
+      "image": "/assets/images/ingredients/white-pepper.jpg",
+      "preparation": "按配方少量量取，勿以同量花椒替代。"
+    },
+    {
+      "name": "鲜面条",
+      "image": "/assets/images/ingredients/noodles.jpg",
+      "preparation": "检查保质期，轻轻抖散；生面条需按步骤煮熟，不直接当熟食。"
+    },
+    {
+      "name": "无刺白肉鱼柳",
+      "image": "/assets/images/ingredients/white-fish.jpg",
+      "preparation": "冷藏解冻，逐片检查残刺，厨房纸吸干，再按步骤切片或保持整块。"
+    },
+    {
+      "name": "香菜",
+      "image": "/assets/images/ingredients/coriander.jpg",
+      "preparation": "去根和黄叶，流水冲净根部泥沙，沥干后切段或切碎，临出锅再放。"
+    },
+    {
+      "name": "猪肉丝",
+      "image": "/assets/images/ingredients/pork.jpg",
+      "preparation": "冷藏解冻，厨房纸吸干，去筋膜；逆纹切薄片或细丝，按本菜腌制。生熟刀板分开。"
+    },
+    {
+      "name": "水发香菇",
+      "image": "/assets/images/ingredients/mushroom.jpg",
+      "preparation": "切去带泥硬根，逐个冲净后沥干。已泡发香菇检查异味，再挤去多余水分、切片。"
+    },
+    {
+      "name": "笋丝",
+      "image": "/assets/images/ingredients/bamboo-shoots.jpg",
+      "preparation": "按购买状态去壳和老硬根，洗净；鲜笋先煮透后使用，已熟笋按包装处理。"
+    },
+    {
+      "name": "高汤",
+      "image": "/assets/images/ingredients/stock.jpg",
+      "preparation": "按配方量取，冷藏高汤使用前检查保存时间和异味；包装浓缩高汤按说明兑水。"
+    },
+    {
+      "name": "小白菜",
+      "image": "/assets/images/ingredients/bok-choy.jpg",
+      "preparation": "切掉带泥根端，逐片分开流水洗净叶柄泥沙，沥干；粗梗与嫩叶可分开放。"
+    },
+    {
+      "name": "香油（可选）",
+      "image": "/assets/images/ingredients/sesame-oil.jpg",
+      "preparation": "少量量取，通常用于出锅调香，不替代大量炸油。"
+    },
+    {
+      "name": "牛里脊或 flank steak",
+      "image": "/assets/images/ingredients/beef-steak.jpg",
+      "preparation": "冷藏解冻后擦干，去粗筋膜，辨认纹理后逆纹切薄片或条。"
+    },
+    {
+      "name": "蘑菇",
+      "image": "/assets/images/ingredients/mushroom.jpg",
+      "preparation": "切去带泥硬根，逐个冲净后沥干。已泡发香菇检查异味，再挤去多余水分、切片。"
+    },
+    {
+      "name": "荷兰豆",
+      "image": "/assets/images/ingredients/snow-peas.jpg",
+      "preparation": "两端掐去并顺势撕掉两侧筋，流水洗净后沥干。"
+    },
+    {
+      "name": "蚝油",
+      "image": "/assets/images/ingredients/oyster-sauce.jpg",
+      "preparation": "用干净勺量取，开封后按包装冷藏保存；注意贝类过敏原。"
+    },
+    {
+      "name": "姜蒜",
+      "image": "/assets/images/ingredients/ginger-garlic.jpg",
+      "preparation": "姜洗净处理老皮，蒜剥皮去硬根；分别切末或切片备用。"
+    },
+    {
+      "name": "去壳去虾线虾仁",
+      "image": "/assets/images/ingredients/shrimp.jpg",
+      "preparation": "冷藏解冻，检查残壳，开背挑去虾线，轻柔清理后用厨房纸吸干。"
+    },
+    {
+      "name": "黄油",
+      "image": "/assets/images/ingredients/butter.jpg",
+      "preparation": "按用量切小块；需要软化时提前取出，煎炒时用小火避免焦黑。"
+    },
+    {
+      "name": "面粉",
+      "image": "/assets/images/ingredients/flour.jpg",
+      "preparation": "按配方种类称量，需要时过筛；不要用淀粉等量替代面粉。"
+    },
+    {
+      "name": "淡奶油",
+      "image": "/assets/images/ingredients/milk.jpg",
+      "preparation": "检查保质期，按量取出，开封后保持冷藏；淡奶油与牛奶按菜谱区分。"
+    },
+    {
+      "name": "月桂叶",
+      "image": "/assets/images/ingredients/bay-leaf.jpg",
+      "preparation": "检查完整、无霉变，按片量取；炖煮后取出，不直接咀嚼。"
+    },
+    {
+      "name": "高筋面粉",
+      "image": "/assets/images/ingredients/flour.jpg",
+      "preparation": "按配方种类称量，需要时过筛；不要用淀粉等量替代面粉。"
+    },
+    {
+      "name": "番茄酱汁",
+      "image": "/assets/images/ingredients/tomato-puree.jpg",
+      "preparation": "检查包装和保质期，按菜谱品种量取；浓缩番茄膏不等量替代番茄泥。"
+    },
+    {
+      "name": "马苏里拉奶酪",
+      "image": "/assets/images/ingredients/mozzarella.jpg",
+      "preparation": "鲜奶酪先沥去包装水并吸干，擦丝型直接按量取用。"
+    },
+    {
+      "name": "罗勒叶",
+      "image": "/assets/images/ingredients/basil.jpg",
+      "preparation": "摘去粗梗和变色叶，轻轻冲洗后擦干，使用前再切或撕碎。"
+    },
+    {
+      "name": "即发干酵母",
+      "image": "/assets/images/ingredients/yeast.jpg",
+      "preparation": "检查活性和保质期，按量称取；不直接接触过热液体。"
+    },
+    {
+      "name": "鸡胸肉",
+      "image": "/assets/images/ingredients/chicken-breast.jpg",
+      "preparation": "冷藏解冻，去筋膜和多余脂肪，吸干后按步骤切片或丁；生鸡不在水龙头下冲洗。"
+    },
+    {
+      "name": "罗马生菜",
+      "image": "/assets/images/ingredients/romaine.jpg",
+      "preparation": "去老根和黄叶，逐片流水洗净，甩干或擦干；生食时用干净刀板。"
+    },
+    {
+      "name": "恰巴塔面包",
+      "image": "/assets/images/ingredients/ciabatta.jpg",
+      "preparation": "检查无霉点，用锯齿刀切开，按步骤烘热。"
+    },
+    {
+      "name": "帕玛森奶酪",
+      "image": "/assets/images/ingredients/parmesan.jpg",
+      "preparation": "按量刨碎或磨细备用，外层硬皮按包装说明处理。"
+    },
+    {
+      "name": "蛋黄酱",
+      "image": "/assets/images/ingredients/mayonnaise.jpg",
+      "preparation": "用干净勺取用，开封后按包装冷藏保存。"
+    },
+    {
+      "name": "白葡萄酒醋",
+      "image": "/assets/images/ingredients/vinegar.jpg",
+      "preparation": "按配方量取备用，醋的品种以菜谱为准。"
+    },
+    {
+      "name": "鳀鱼柳",
+      "image": "/assets/images/ingredients/anchovy.jpg",
+      "preparation": "罐装或油渍鱼柳沥去多余油汁，按菜谱切碎，含盐量较高。"
+    },
+    {
+      "name": "普通面粉",
+      "image": "/assets/images/ingredients/flour.jpg",
+      "preparation": "按配方种类称量，需要时过筛；不要用淀粉等量替代面粉。"
+    },
+    {
+      "name": "牛奶",
+      "image": "/assets/images/ingredients/milk.jpg",
+      "preparation": "检查保质期，按量取出，开封后保持冷藏；淡奶油与牛奶按菜谱区分。"
+    },
+    {
+      "name": "柠檬（可选）",
+      "image": "/assets/images/ingredients/lemon.jpg",
+      "preparation": "流水洗净擦干，切开挤汁并滤去籽；取皮屑时只刨黄色表皮。"
+    },
+    {
+      "name": "罐装樱桃番茄",
+      "image": "/assets/images/ingredients/canned-tomato.jpg",
+      "preparation": "检查包装和保质期，开罐后按配方取用；罐内番茄不必再清洗。"
+    },
+    {
+      "name": "红洋葱",
+      "image": "/assets/images/ingredients/red-onion.jpg",
+      "preparation": "剥去紫红干外皮，切去根端和顶端，洗净后切丝或丁。"
+    },
+    {
+      "name": "红辣椒",
+      "image": "/assets/images/ingredients/red-pepper.jpg",
+      "preparation": "洗净去蒂，按口味去籽后切段或切丝；处理后洗手，勿揉眼。"
+    },
+    {
+      "name": "四季豆",
+      "image": "/assets/images/ingredients/green-beans.jpg",
+      "preparation": "掐去两端，撕去侧筋，洗净后沥干切段；必须彻底煮炒熟，不能只看变色。"
+    },
+    {
+      "name": "椰奶",
+      "image": "/assets/images/ingredients/coconut-milk.jpg",
+      "preparation": "检查保质期，开罐前摇匀或开罐后搅匀，按量取用。"
+    },
+    {
+      "name": "泰式绿咖喱酱",
+      "image": "/assets/images/ingredients/green-curry-paste.jpg",
+      "preparation": "按配方品种量取，检查包装中的虾酱、鱼露等过敏原。"
+    },
+    {
+      "name": "鱼露",
+      "image": "/assets/images/ingredients/fish-sauce.jpg",
+      "preparation": "按配方量取，咸味较重，不要等量替代普通酱油。"
+    },
+    {
+      "name": "罗勒",
+      "image": "/assets/images/ingredients/basil.jpg",
+      "preparation": "摘去粗梗和变色叶，轻轻冲洗后擦干，使用前再切或撕碎。"
+    },
+    {
+      "name": "蜂蜜",
+      "image": "/assets/images/ingredients/honey.jpg",
+      "preparation": "用干净勺量取备用。"
+    },
+    {
+      "name": "印度综合香料",
+      "image": "/assets/images/ingredients/garam-masala.jpg",
+      "preparation": "按配方量取，检查包装配料；小火短时间炒香，不要炒焦。"
+    },
+    {
+      "name": "姜蓉",
+      "image": "/assets/images/ingredients/ginger.jpg",
+      "preparation": "洗去泥，刮除老皮和干硬处；按步骤切片、切丝或剁成姜蓉。"
+    },
+    {
+      "name": "腰果酱",
+      "image": "/assets/images/ingredients/cashew-paste.jpg",
+      "preparation": "检查配料和保质期，量取备用；注意坚果过敏原。"
+    },
+    {
+      "name": "炖煮牛肉块",
+      "image": "/assets/images/ingredients/beef-chunks.jpg",
+      "preparation": "冷藏解冻，吸干后去粗筋膜，切大小接近的块；生熟刀板分开。"
+    },
+    {
+      "name": "番茄膏",
+      "image": "/assets/images/ingredients/tomato-puree.jpg",
+      "preparation": "检查包装和保质期，按菜谱品种量取；浓缩番茄膏不等量替代番茄泥。"
+    },
+    {
+      "name": "牛肉高汤",
+      "image": "/assets/images/ingredients/stock.jpg",
+      "preparation": "按配方量取，冷藏高汤使用前检查保存时间和异味；包装浓缩高汤按说明兑水。"
+    },
+    {
+      "name": "月桂叶和百里香",
+      "image": "/assets/images/ingredients/bay-thyme.jpg",
+      "preparation": "百里香洗净沥干，月桂叶检查无霉变；炖煮结束取出硬叶和粗枝。"
+    },
+    {
+      "name": "扁意面",
+      "image": "/assets/images/ingredients/tagliatelle.jpg",
+      "preparation": "按人数量取宽扁面，查看包装煮制时间，不按细圆意面时间直接套用。"
+    },
+    {
+      "name": "生虾仁",
+      "image": "/assets/images/ingredients/shrimp.jpg",
+      "preparation": "冷藏解冻，检查残壳，开背挑去虾线，轻柔清理后用厨房纸吸干。"
+    },
+    {
+      "name": "欧芹",
+      "image": "/assets/images/ingredients/parsley.jpg",
+      "preparation": "摘去粗硬梗和变色叶，流水洗净后沥干，按菜谱切碎使用。"
+    },
+    {
+      "name": "小南瓜",
+      "image": "/assets/images/ingredients/butternut.jpg",
+      "preparation": "洗净，放稳后切开，挖去籽和瓤；需去皮的配方削皮再切均匀块。"
+    },
+    {
+      "name": "茄子",
+      "image": "/assets/images/ingredients/eggplant.jpg",
+      "preparation": "洗净去蒂，保留嫩皮，去损伤部分，切后及时烹调或短暂放清水防变色。"
+    },
+    {
+      "name": "红椒",
+      "image": "/assets/images/ingredients/red-pepper.jpg",
+      "preparation": "洗净去蒂，按口味去籽后切段或切丝；处理后洗手，勿揉眼。"
+    },
+    {
+      "name": "西葫芦",
+      "image": "/assets/images/ingredients/zucchini.jpg",
+      "preparation": "洗净，切去两端，嫩皮可保留，老硬籽瓤去掉后按步骤切片或块。"
+    },
+    {
+      "name": "咖喱酱",
+      "image": "/assets/images/ingredients/green-curry-paste.jpg",
+      "preparation": "按配方品种量取，检查包装中的虾酱、鱼露等过敏原。"
+    },
+    {
+      "name": "干辣椒（可选）",
+      "image": "/assets/images/ingredients/dried-chili.jpg",
+      "preparation": "拣去发霉椒和椒梗，剪段，按口味去籽；小火炒香避免变黑。"
+    },
+    {
+      "name": "淀粉",
+      "image": "/assets/images/ingredients/cornstarch.jpg",
+      "preparation": "腌肉时按量加入；勾芡先与凉水调匀，临下锅前再次搅匀。"
+    },
+    {
+      "name": "包菜",
+      "image": "/assets/images/ingredients/cabbage.jpg",
+      "preparation": "剥掉外层老叶，切去硬根芯，逐片洗净，沥干后按步骤手撕或切片。"
+    },
+    {
+      "name": "生菜",
+      "image": "/assets/images/ingredients/romaine.jpg",
+      "preparation": "去老根和黄叶，逐片流水洗净，甩干或擦干；生食时用干净刀板。"
+    },
+    {
+      "name": "菜心",
+      "image": "/assets/images/ingredients/choy-sum.jpg",
+      "preparation": "去老根、黄叶，逐根洗净；粗梗纵向剖开，便于与嫩叶同时熟。"
+    },
+    {
+      "name": "牛腩",
+      "image": "/assets/images/ingredients/beef-chunks.jpg",
+      "preparation": "冷藏解冻，吸干后去粗筋膜，切大小接近的块；生熟刀板分开。"
+    },
+    {
+      "name": "牛肉",
+      "image": "/assets/images/ingredients/beef-chunks.jpg",
+      "preparation": "冷藏解冻，吸干后去粗筋膜，切大小接近的块；生熟刀板分开。"
+    },
+    {
+      "name": "鸡腿肉",
+      "image": "/assets/images/ingredients/chicken.jpg",
+      "preparation": "冷藏解冻，检查碎骨，去多余脂肪，厨房纸吸干后切块；生鸡不在水龙头下冲洗。"
+    },
+    {
+      "name": "料酒",
+      "image": "/assets/images/ingredients/cooking-wine.jpg",
+      "preparation": "按配方量取备用，不以白酒等量替代。"
+    },
+    {
+      "name": "羊肉片",
+      "image": "/assets/images/ingredients/lamb-slices.jpg",
+      "preparation": "冷藏解冻后吸干；整块羊肉逆纹切薄片，使用前保持冷藏。"
+    },
+    {
+      "name": "五花肉",
+      "image": "/assets/images/ingredients/pork-belly.jpg",
+      "preparation": "冷藏解冻，检查皮上残毛并处理，吸干后按菜谱切块或先煮后切；生熟刀板分开。"
+    },
+    {
+      "name": "猪肉片",
+      "image": "/assets/images/ingredients/pork.jpg",
+      "preparation": "冷藏解冻，厨房纸吸干，去筋膜；逆纹切薄片或细丝，按本菜腌制。生熟刀板分开。"
+    },
+    {
+      "name": "黄瓜",
+      "image": "/assets/images/ingredients/cucumber.jpg",
+      "preparation": "流水洗净并擦干，切去两端，按菜谱拍碎、切片或切丝；老硬皮可削去。"
+    },
+    {
+      "name": "排骨",
+      "image": "/assets/images/ingredients/ribs.jpg",
+      "preparation": "请摊主剁成均匀段，检查并去除骨屑，吸干；需要焯水时按本菜步骤执行。"
+    },
+    {
+      "name": "整鸡",
+      "image": "/assets/images/ingredients/whole-chicken.jpg",
+      "preparation": "冷藏完全解冻，取出腹腔内包装的内脏，检查碎骨和残羽，厨房纸吸干；不要冲洗生鸡。"
+    },
+    {
+      "name": "冬瓜",
+      "image": "/assets/images/ingredients/winter-melon.jpg",
+      "preparation": "洗净，削去绿色硬皮，挖去籽和松软瓤，切均匀块或片。"
+    },
+    {
+      "name": "莲藕",
+      "image": "/assets/images/ingredients/lotus-root.jpg",
+      "preparation": "洗净泥沙，削去外皮和两端藕节，冲净孔内泥沙；切后浸清水防变色，下锅前沥干。"
+    },
+    {
+      "name": "紫菜",
+      "image": "/assets/images/ingredients/nori.jpg",
+      "preparation": "拣去杂质，按包装说明使用；需要清洗时快速冲洗，不长时间浸泡。"
+    },
+    {
+      "name": "芝麻油",
+      "image": "/assets/images/ingredients/sesame-oil.jpg",
+      "preparation": "少量量取，通常用于出锅调香，不替代大量炸油。"
+    },
+    {
+      "name": "鸡肉",
+      "image": "/assets/images/ingredients/chicken.jpg",
+      "preparation": "冷藏解冻，检查碎骨，去多余脂肪，厨房纸吸干后切块；生鸡不在水龙头下冲洗。"
+    },
+    {
+      "name": "玉米",
+      "image": "/assets/images/ingredients/corn.jpg",
+      "preparation": "剥苞叶并去须，洗净；煮汤切段，炒饭用玉米粒时沿芯切下颗粒。"
+    },
+    {
+      "name": "丝瓜",
+      "image": "/assets/images/ingredients/loofah.jpg",
+      "preparation": "洗净后削去棱角和粗皮，切掉两端，切滚刀块；切后及时烹调防变黑。"
+    },
+    {
+      "name": "韭菜",
+      "image": "/assets/images/ingredients/chives.jpg",
+      "preparation": "切去根部老硬部分，择去黄叶，逐束冲净根部泥沙，沥干后切段。"
+    },
+    {
+      "name": "熟米饭",
+      "image": "/assets/images/ingredients/rice.jpg",
+      "preparation": "确认是及时冷藏、保存良好的熟饭，用干净勺拨散，炒饭时彻底热透。"
+    },
+    {
+      "name": "咖喱块",
+      "image": "/assets/images/ingredients/curry-block.jpg",
+      "preparation": "掰成小块备用，加入汤汁时转小火或离火搅化，避免粘底。"
+    },
+    {
+      "name": "海带",
+      "image": "/assets/images/ingredients/kelp.jpg",
+      "preparation": "干海带按包装泡发，盐渍海带洗去多余盐分，冲净沙粒，切段或丝。"
+    },
+    {
+      "name": "牛肉片",
+      "image": "/assets/images/ingredients/beef-slices.jpg",
+      "preparation": "冷藏解冻后吸干，整块牛肉先逆纹切薄片，再按菜谱腌制。"
+    },
+    {
+      "name": "豆芽",
+      "image": "/assets/images/ingredients/bean-sprouts.jpg",
+      "preparation": "择去坏芽和残壳，流水洗净，沥干后充分加热；不要直接生吃。"
+    },
+    {
+      "name": "菠菜",
+      "image": "/assets/images/ingredients/spinach.jpg",
+      "preparation": "切去带泥根端，择去黄叶，逐片洗净泥沙，按菜谱焯熟或炒熟。"
+    },
+    {
+      "name": "泡菜",
+      "image": "/assets/images/ingredients/kimchi.jpg",
+      "preparation": "检查保质期和异味，按量取出切段；是否保留泡菜汁以配方为准。"
+    },
+    {
+      "name": "虾仁",
+      "image": "/assets/images/ingredients/shrimp.jpg",
+      "preparation": "冷藏解冻，检查残壳，开背挑去虾线，轻柔清理后用厨房纸吸干。"
+    },
+    {
+      "name": "辣椒粉",
+      "image": "/assets/images/ingredients/chili-powder.jpg",
+      "preparation": "按配方量取，检查保质期；不要直接大火干炒。"
+    },
+    {
+      "name": "米粉",
+      "image": "/assets/images/ingredients/rice-noodles.jpg",
+      "preparation": "按包装泡软或煮熟，沥干后使用，不按普通鲜面条时间处理。"
+    },
+    {
+      "name": "香茅",
+      "image": "/assets/images/ingredients/lemongrass.jpg",
+      "preparation": "去根端和干硬外层，洗净；取嫩白茎拍裂切段，纤维粗的段煮后取出。"
+    },
+    {
+      "name": "青柠",
+      "image": "/assets/images/ingredients/lime.jpg",
+      "preparation": "流水洗净擦干，切开挤汁并滤籽；取皮屑时只刨绿色外皮。"
+    },
+    {
+      "name": "春卷皮",
+      "image": "/assets/images/ingredients/rice-paper.jpg",
+      "preparation": "越南鲜春卷用米纸，按包装蘸水软化；油炸春卷则用小麦春卷皮，不能直接互换。"
+    },
+    {
+      "name": "培根",
+      "image": "/assets/images/ingredients/bacon.jpg",
+      "preparation": "按量取出切条或小块，保持冷藏；包装未标即食时需充分加热。"
+    },
+    {
+      "name": "千层面片",
+      "image": "/assets/images/ingredients/lasagna-sheets.jpg",
+      "preparation": "查看包装是免煮还是需预煮，按要求处理，再铺入烤皿。"
+    },
+    {
+      "name": "通心粉",
+      "image": "/assets/images/ingredients/macaroni.jpg",
+      "preparation": "按人数称量，查看包装时间；焗烤时按菜谱要求略缩短预煮时间。"
+    },
+    {
+      "name": "奶酪",
+      "image": "/assets/images/ingredients/cheddar.jpg",
+      "preparation": "选适合融化的奶酪，切片或擦丝；不要把印度奶酪与融化型奶酪互换。"
+    },
+    {
+      "name": "鹰嘴豆",
+      "image": "/assets/images/ingredients/chickpeas.jpg",
+      "preparation": "这里使用熟或罐装鹰嘴豆，冲洗后沥干；干鹰嘴豆需先泡发并完全煮熟。"
+    },
+    {
+      "name": "南瓜",
+      "image": "/assets/images/ingredients/butternut.jpg",
+      "preparation": "洗净，放稳后切开，挖去籽和瓤；需去皮的配方削皮再切均匀块。"
+    },
+    {
+      "name": "汉堡胚",
+      "image": "/assets/images/ingredients/burger-bun.jpg",
+      "preparation": "检查无霉点，沿中间剖开，煎烤前备好上下两片。"
+    },
+    {
+      "name": "金枪鱼罐头",
+      "image": "/assets/images/ingredients/tuna-can.jpg",
+      "preparation": "检查罐体不鼓包、无破损，开罐后沥去油或水，用干净叉拨散。"
+    },
+    {
+      "name": "吐司",
+      "image": "/assets/images/ingredients/toast.jpg",
+      "preparation": "检查无霉点，按菜谱切片或切边。"
+    },
+    {
+      "name": "白肉鱼柳",
+      "image": "/assets/images/ingredients/white-fish.jpg",
+      "preparation": "冷藏解冻，逐片检查残刺，厨房纸吸干，再按步骤切片或保持整块。"
+    },
+    {
+      "name": "牛油果",
+      "image": "/assets/images/ingredients/avocado.jpg",
+      "preparation": "外皮洗净，沿果核切一圈后拧开，用勺取核和果肉；不要用刀猛砍果核。"
+    },
+    {
+      "name": "藜麦",
+      "image": "/assets/images/ingredients/quinoa.jpg",
+      "preparation": "称量后放细筛中流水冲洗，再按包装比例加水煮制。"
+    },
+    {
+      "name": "燕麦片",
+      "image": "/assets/images/ingredients/oats.jpg",
+      "preparation": "冷食选即食燕麦或按包装适合浸泡的产品；需煮制的燕麦先煮熟并冷却。"
+    },
+    {
+      "name": "酸奶",
+      "image": "/assets/images/ingredients/yogurt.jpg",
+      "preparation": "确认是可直接食用、保存良好的酸奶，按量取出后保持冷藏。"
+    },
+    {
+      "name": "红扁豆",
+      "image": "/assets/images/ingredients/red-lentils.jpg",
+      "preparation": "拣去杂质，淘洗沥干，按包装加水煮至完全软烂。"
+    },
+    {
+      "name": "印度奶酪",
+      "image": "/assets/images/ingredients/paneer.jpg",
+      "preparation": "沥去包装液体，切均匀小块，用厨房纸吸干表面水分。"
+    },
+    {
+      "name": "墨西哥饼",
+      "image": "/assets/images/ingredients/tortilla.jpg",
+      "preparation": "检查保质期，按包装轻微回温，避免折叠时开裂。"
+    },
+    {
+      "name": "红腰豆",
+      "image": "/assets/images/ingredients/kidney-beans.jpg",
+      "preparation": "这里使用熟或罐装红腰豆，冲洗沥干；不要将生干红腰豆直接按本菜短时煮制。"
+    },
+    {
+      "name": "辣椒油",
+      "image": "/assets/images/ingredients/chili-oil.jpg",
+      "preparation": "搅匀后按配方量取；这是调味红油，不替代炸制用油。"
+    },
+    {
+      "name": "酸菜",
+      "image": "/assets/images/ingredients/sauerkraut.jpg",
+      "preparation": "按包装冲去多余盐分，挤干后切段；不以生小白菜替代。"
+    },
+    {
+      "name": "鱼头",
+      "image": "/assets/images/ingredients/fish-head.jpg",
+      "preparation": "请摊主剖开并去鳃，检查残鳃、血污和细刺；轻柔清理，吸干后按菜谱腌制。"
+    },
+    {
+      "name": "剁椒",
+      "image": "/assets/images/ingredients/chopped-chili.jpg",
+      "preparation": "检查保质期，用干净勺取出；含盐较多，后续盐量酌减。"
+    },
+    {
+      "name": "梅干菜",
+      "image": "/assets/images/ingredients/preserved-mustard.jpg",
+      "preparation": "按包装要求泡软，反复冲净沙粒，挤去多余水分后切碎。"
+    },
+    {
+      "name": "整条桂鱼",
+      "image": "/assets/images/ingredients/mandarin-fish.jpg",
+      "preparation": "请摊主去鳞、鳃和内脏，检查腹腔残留，吸干表面；食用时注意鱼刺。"
+    },
+    {
+      "name": "带壳大虾",
+      "image": "/assets/images/ingredients/whole-shrimp.jpg",
+      "preparation": "剪去长须和尖刺，开背挑虾线，清理后吸干；按菜谱保留虾壳。"
+    },
+    {
+      "name": "红薯粉丝",
+      "image": "/assets/images/ingredients/glass-noodles.jpg",
+      "preparation": "按包装泡软或预煮，沥干后剪成方便夹取的长度。"
+    },
+    {
+      "name": "娃娃菜",
+      "image": "/assets/images/ingredients/baby-cabbage.jpg",
+      "preparation": "切去根端和老叶，纵向分瓣，冲净叶片间泥沙后沥干。"
+    },
+    {
+      "name": "皮蛋",
+      "image": "/assets/images/ingredients/century-egg.jpg",
+      "preparation": "剥去外壳，检查是否变质，用干净刀切瓣；不要当作生鸡蛋打散。"
+    },
+    {
+      "name": "花菜",
+      "image": "/assets/images/ingredients/cauliflower.jpg",
+      "preparation": "切去老根和外叶，分成均匀小朵，流水仔细冲洗缝隙，再沥干。"
+    },
+    {
+      "name": "带壳扇贝",
+      "image": "/assets/images/ingredients/scallop.jpg",
+      "preparation": "请摊主处理，刷净壳外泥沙，去内脏和黑色消化腺，冲净可食肌肉并沥干。"
+    },
+    {
+      "name": "粉丝",
+      "image": "/assets/images/ingredients/glass-noodles.jpg",
+      "preparation": "按包装泡软或预煮，沥干后剪成方便夹取的长度。"
+    },
+    {
+      "name": "大米",
+      "image": "/assets/images/ingredients/raw-rice.jpg",
+      "preparation": "按人数量取，用清水轻淘后沥水，煮制水量以米种和设备说明为准。"
+    },
+    {
+      "name": "广式腊肠",
+      "image": "/assets/images/ingredients/chinese-sausage.jpg",
+      "preparation": "检查保质期和异味，按包装处理外层肠衣，切薄片后充分蒸炒。"
+    },
+    {
+      "name": "火腿",
+      "image": "/assets/images/ingredients/ham.jpg",
+      "preparation": "按配方切丁或片，查看包装是否即食及保存要求。"
+    },
+    {
+      "name": "芝麻酱",
+      "image": "/assets/images/ingredients/sesame-paste.jpg",
+      "preparation": "先搅匀，再分次加入配方中的水或调味汁调稀。"
+    }
+  ]
+}

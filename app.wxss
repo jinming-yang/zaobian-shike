@@ -1,0 +1,76 @@
+@import "./styles/theme.wxss";
+@import "./styles/theme-pages.wxss";
+@import "./styles/theme-ornate.wxss";
+@import "./styles/theme-illustrated.wxss";
+
+page {
+  min-height: 100%;
+  background: var(--color-bg-page);
+  color: var(--color-text-primary);
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.2;
+  text-align: center;
+}
+
+button::after {
+  border: 0;
+}
+
+.page-shell {
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.primary-button {
+  height: 96rpx;
+  border-radius: 48rpx;
+  background: var(--color-brand);
+  color: #fff;
+  font-size: 32rpx;
+  font-weight: 650;
+  line-height: 1.2;
+  box-shadow: var(--shadow-brand);
+}
+
+.primary-button::after,
+.secondary-button::after {
+  border: 0;
+}
+
+.secondary-button {
+  height: 84rpx;
+  border-radius: 42rpx;
+  background: var(--color-brand-soft);
+  color: var(--color-brand-deep);
+  font-size: 29rpx;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.safe-bottom {
+  padding-bottom: calc(28rpx + env(safe-area-inset-bottom));
+}
+
+.tap-pressed{opacity:.72;transform:scale(.98);transition:transform .1s,opacity .1s}
+.image-loading-note{display:block;color:#817766;font-size:23rpx;margin:14rpx 0}
+.button-hover{opacity:.78;transform:scale(.98)}
+.recommendation-reason{display:block;color:#31584c;font-size:21rpx;line-height:1.5;margin-top:8rpx}
+.favorite-star,.detail-star,.settings-button,.delete-history{min-width:72rpx;min-height:72rpx;display:flex;align-items:center;justify-content:center;box-sizing:border-box}
+.report-insights,.report-nutrition,.report-trend{display:block!important;padding:24rpx;background:#fff;border-radius:22rpx;margin:16rpx 0}
+.report-insights text,.report-nutrition text,.report-trend>text{display:block;font-size:24rpx;line-height:1.7;color:#746858}
+.report-nutrition-title{font-weight:bold;color:#31584c!important}
+.report-nutrition text:last-child,.report-trend>text:last-child{font-size:20rpx;color:#968677}
+.trend-columns{display:flex;gap:8rpx;margin:20rpx 0}
+.trend-column{flex:1;min-width:0;text-align:center}
+.trend-column>text{font-size:18rpx;color:#746858;display:block}
+.trend-track{height:160rpx;margin:10rpx 5rpx;background:#edf1ea;display:flex;align-items:flex-end;border-radius:8rpx;overflow:hidden}
+.trend-track view{width:100%;background:#527866;border-radius:8rpx}

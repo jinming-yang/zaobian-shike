@@ -1,0 +1,4 @@
+{
+  "navigationBarTitleText": "按食材找菜",
+  "usingComponents": { "active-cooks": "/components/active-cooks/index" }
+}

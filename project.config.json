@@ -1,0 +1,79 @@
+{
+  "description": "灶边 - 分步烹饪指导小程序",
+  "packOptions": {
+    "ignore": [
+      {
+        "value": "ingredient-images",
+        "type": "folder"
+      },
+      {
+        "value": "程序说明",
+        "type": "folder"
+      },
+      {
+        "value": ".pdf_tools",
+        "type": "folder"
+      },
+      {
+        "value": "docs",
+        "type": "folder"
+      },
+      {
+        "value": "README.md",
+        "type": "file"
+      },
+      {
+        "value": ".codex",
+        "type": "folder"
+      },
+      {
+        "value": "tmp",
+        "type": "folder"
+      },
+      {
+        "value": "assets/branding",
+        "type": "folder"
+      },
+      {
+        "value": "assets/images/steps",
+        "type": "folder"
+      },
+      {
+        "value": "灶边食刻-完整源码.zip",
+        "type": "file"
+      }
+    ],
+    "include": []
+  },
+  "setting": {
+    "useCompilerPlugins": false,
+    "urlCheck": false,
+    "es6": true,
+    "postcss": true,
+    "minified": true,
+    "enhance": true,
+    "compileHotReLoad": true,
+    "compileWorklet": false,
+    "uglifyFileName": false,
+    "uploadWithSourceMap": true,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true,
+    "minifyWXML": true,
+    "localPlugins": false,
+    "disableUseStrict": false,
+    "condition": false,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    }
+  },
+  "compileType": "miniprogram",
+  "appid": "wxb6fe90024237c673",
+  "projectname": "zaobian-cooking-guide",
+  "condition": {},
+  "simulatorPluginLibVersion": {},
+  "editorSetting": {},
+  "isGameTourist": false
+}

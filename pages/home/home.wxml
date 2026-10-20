@@ -1,0 +1,111 @@
+<view class="page-shell home-page safe-bottom">
+  <active-cooks bottom-offset="145" />
+  <view class="welcome">
+    <image class="illustration-card-bg illustration-card-bg-home" src="/assets/illustrations/banner-home-v2.jpg" mode="aspectFill" />
+    <view class="welcome-spark spark-one"></view><view class="welcome-spark spark-two"></view><view class="welcome-leaf leaf-one"></view><view class="welcome-leaf leaf-two"></view>
+    <view class="welcome-copy">
+      <text class="eyebrow">灶边食刻 · 奶油元气厨房</text>
+      <view class="welcome-title"><text>简单做菜，</text><text>好好吃饭</text></view>
+      <text class="welcome-note">小灶已备好菜单，今天也轻松开饭！</text>
+    </view>
+    <image class="welcome-mascot mascot-bob" src="/assets/characters/xiaozao-welcome.png" mode="aspectFit" />
+    <image class="welcome-helper mascot-bob" src="/assets/characters/danzai-reminder.png" mode="aspectFit" />
+  </view>
+
+  <view class="search-box {{showSearchResults ? 'expanded' : ''}}">
+    <image class="search-icon illustrated-icon" src="/assets/icons/illustrated/search.png" mode="aspectFit" />
+    <input placeholder="搜索菜名、食材、菜系或场景" value="{{keyword}}" bindinput="onSearchInput" bindfocus="onSearchFocus" bindconfirm="onSearchFocus" confirm-type="search" />
+    <text wx:if="{{keyword}}" class="clear" bindtap="clearSearch" hover-class="tap-pressed" hover-stay-time="100">×</text>
+  </view>
+
+  <view wx:if="{{showSearchResults}}" class="search-dropdown">
+    <view class="search-results-heading"><text>搜索结果 · {{searchResults.length}} 道</text><view bindtap="closeSearch" hover-class="tap-pressed" hover-stay-time="100">收起</view></view>
+    <scroll-view wx:if="{{searchResults.length}}" scroll-y style="height: {{searchPanelHeight}}rpx;" class="search-results-scroll">
+      <view wx:for="{{searchResults}}" wx:key="id" class="search-result-row" data-id="{{item.id}}" bindtap="openSearchResult" hover-class="tap-pressed" hover-stay-time="100">
+        <image src="{{item.displayImage || item.image}}" class="search-result-image" mode="aspectFill" lazy-load="{{true}}" />
+        <view class="search-result-copy"><text>{{item.name}}</text><text>约 {{item.cookMinutes}} 分钟 · 难度 {{item.difficulty}}/5</text><text wx:if="{{item.allergyWarning}}" class="allergy-list-warning">含 {{item.allergyWarning}}</text></view>
+        <text class="search-result-arrow">›</text>
+      </view>
+    </scroll-view>
+    <view wx:else class="search-no-results">没有找到相关菜品，试试其他关键词</view>
+  </view>
+
+  <view class="quick-grid">
+  <view class="pantry-entry" bindtap="openPantry" hover-class="tap-pressed" hover-stay-time="100">
+    <image class="pantry-icon illustrated-icon" src="/assets/icons/illustrated/pantry.png" mode="aspectFit" />
+    <view class="pantry-copy">
+      <text>家里有什么，就做什么</text>
+      <text>添加已有食材，寻找可以烹饪的菜</text>
+    </view>
+    <text class="pantry-arrow">›</text>
+  </view>
+
+  <view class="shopping-entry" bindtap="openShoppingList" hover-class="tap-pressed" hover-stay-time="100">
+    <image class="shopping-icon illustrated-icon" src="/assets/icons/illustrated/shopping.png" mode="aspectFit" />
+    <view class="shopping-copy">
+      <text>采购清单</text>
+      <text>{{shoppingCount ? shoppingCount + ' 项待采购' : '把备菜食材集中到这里'}}</text>
+    </view>
+    <view wx:if="{{shoppingCount}}" class="shopping-count">{{shoppingCount}}</view>
+    <text class="shopping-chevron">›</text>
+  </view>
+  </view>
+
+  <view class="recommend-row">
+    <view class="section-heading">
+      <text>灵感分类</text>
+      <text class="section-note">左右滑动发现更多</text>
+    </view>
+    <scroll-view scroll-x class="category-scroll" enhanced show-scrollbar="false">
+      <view class="category-track">
+        <view
+          wx:for="{{categories}}"
+          wx:key="*this"
+          class="category-card {{activeCategory === item ? 'active' : ''}}"
+          data-category="{{item}}"
+          bindtap="selectCategory"
+         hover-class="tap-pressed" hover-stay-time="100">
+          <view class="category-dot"><image class="category-art" src="{{index === 0 ? '/assets/stickers/v2/tomato.png' : index === 1 ? '/assets/stickers/v2/egg.png' : index === 2 ? '/assets/stickers/v2/greens.png' : index === 3 ? '/assets/stickers/v2/pot.png' : index === 4 ? '/assets/stickers/v2/carrot.png' : '/assets/stickers/v2/mushroom.png'}}" mode="aspectFit" /></view>
+          <text>{{item}}</text>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+
+  <view class="list-heading">
+    <text>{{activeCategory === '全部' ? '今日推荐' : activeCategory}}</text>
+    <text>{{filteredRecipes.length}} 道</text>
+  </view>
+
+  <view class="recipe-list" wx:if="{{filteredRecipes.length}}">
+    <view
+      wx:for="{{filteredRecipes}}"
+      wx:key="id"
+      class="recipe-row"
+      data-id="{{item.id}}"
+      bindtap="openRecipe"
+     hover-class="tap-pressed" hover-stay-time="100">
+      <image class="recipe-thumb" src="{{item.displayImage || item.image}}" mode="aspectFill" lazy-load="{{true}}" />
+      <view class="recipe-copy">
+        <text class="recipe-name">{{item.name}}</text>
+        <text class="recipe-subtitle">{{item.subtitle}}</text>
+        <text wx:if="{{item.recommendationReason}}" class="recommendation-reason">{{item.recommendationReason}}</text>
+        <view class="recipe-meta">
+          <text>约 {{item.cookMinutes}} 分钟</text>
+          <text>难度 {{item.difficulty}}/5</text>
+        </view>
+        <text wx:if="{{item.allergyWarning}}" class="allergy-list-warning">含 {{item.allergyWarning}}</text>
+      </view>
+      <view class="favorite-star {{item.isFavorite ? 'active' : ''}}" data-id="{{item.id}}" catchtap="toggleFavorite" hover-class="tap-pressed" hover-stay-time="100"><image src="/assets/icons/illustrated/heart.png" mode="aspectFit" /></view>
+      <text class="chevron">›</text>
+    </view>
+  </view>
+
+  <view class="empty" wx:else>
+    <image class="empty-icon empty-art" src="/assets/stickers/v2/sparkle.png" mode="aspectFit" />
+    <text class="empty-title">暂时没有找到这道菜</text>
+    <text>试试其他关键词或分类</text>
+  </view>
+</view>
+
+<page-tutorial id="page-guide" page-key="{{tutorialKey}}" steps="{{tutorialSteps}}" />

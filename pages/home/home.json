@@ -1,0 +1,4 @@
+{
+  "navigationBarTitleText": "灶边食刻",
+  "usingComponents": { "active-cooks": "/components/active-cooks/index" }
+}

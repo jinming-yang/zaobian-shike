@@ -1,0 +1,198 @@
+/* 奶油元气厨房 · 二维绘本插画资源层 */
+.welcome {
+  position:relative;
+  min-height:250rpx;
+  padding:28rpx 250rpx 28rpx 28rpx;
+  overflow:hidden;
+  box-sizing:border-box;
+  background:#fff9ec!important;
+}
+
+.intro-card,.prep-header {
+  position:relative;
+  overflow:hidden;
+  background:#fff9ec!important;
+  color:var(--color-text-primary)!important;
+}
+.intro-card .eyebrow,.intro-card .page-subtitle { color:var(--color-text-secondary)!important; }
+
+.profile-card,.settings-intro,.shopping-summary,.complete-content {
+  position:relative;
+  overflow:hidden;
+  background:#fff9ec!important;
+}
+
+/* 本地大图必须用 WXML image 渲染，不能依赖 WXSS 的本地 background-image。 */
+.illustration-card-bg { position:absolute; z-index:0; left:0; top:0; width:100%; height:100%; pointer-events:none; }
+.illustration-card-bg-home { object-position:center right; }
+.welcome-copy,.welcome-spark,.welcome-leaf,.welcome-mascot,.welcome-helper,
+.intro-copy,.intro-mascot,.prep-sticker,.prep-header>view,.prep-mascot,
+.profile-vignette,.profile-bow,.profile-identity,.profile-stats,
+.settings-sticker,.settings-mascot,.settings-intro>text,
+.shopping-summary-art,.shopping-mint-art,.shopping-summary>view,.shopping-summary>text,
+.complete-decoration,.complete-mascots,.medal,.complete-kicker,.complete-title,.dish-name,.dish-frame,.complete-message,.weekly-result,.complete-content nutrition-card,.complete-content button {
+  position:relative;
+  z-index:2;
+}
+
+.illustrated-icon { display:block; object-fit:contain; }
+.search-icon.illustrated-icon { width:50rpx; height:50rpx; margin-right:14rpx; flex:none; }
+.pantry-icon.illustrated-icon,.shopping-icon.illustrated-icon {
+  width:72rpx!important; height:72rpx!important; padding:2rpx; box-sizing:border-box;
+  border:0!important; border-radius:22rpx; background:transparent!important; box-shadow:none!important;
+}
+.favorite-star image,.detail-star image { width:54rpx; height:54rpx; opacity:.34; }
+.favorite-star.active image,.detail-star.active image { opacity:1; }
+.clock-icon.illustrated-icon { width:76rpx; height:76rpx; margin-right:18rpx; flex:none; border-radius:20rpx; background:rgba(255,255,255,.78); }
+.settings-entry-label { display:flex; align-items:center; gap:14rpx; }
+.settings-entry-label image { width:52rpx; height:52rpx; }
+.nutrition-title-row { display:flex; align-items:center; gap:12rpx; }
+.nutrition-title-row image { width:50rpx; height:50rpx; flex:none; }
+.category-art { width:100%; height:100%; }
+.empty-art { width:92rpx!important; height:92rpx!important; }
+.tab-art { width:38rpx; height:38rpx; flex:none; opacity:.72; }
+.tab-item-active .tab-art { opacity:1; }
+.profile-vignette { position:absolute; right:-34rpx; bottom:-18rpx; width:300rpx; height:124rpx; opacity:.34; pointer-events:none; }
+.shopping-summary { position:relative; overflow:hidden; padding-right:132rpx!important; }
+.shopping-summary-art { position:absolute; right:12rpx; bottom:6rpx; width:120rpx; height:120rpx; opacity:.92; }
+.shopping-mint-art { position:absolute; right:96rpx; bottom:-8rpx; width:64rpx; height:64rpx; transform:rotate(-18deg); }
+.shopping-summary>view,.shopping-summary>text { position:relative; z-index:2; }
+.settings-sticker { position:absolute; z-index:2; right:138rpx; top:12rpx; width:50rpx; height:50rpx; transform:rotate(10deg); }
+.complete-decoration { position:absolute; z-index:-1; top:210rpx; left:50%; width:680rpx; height:280rpx; opacity:.16; transform:translateX(-50%); }
+.prep-sticker { position:absolute; z-index:2; right:150rpx; bottom:2rpx; width:66rpx; height:66rpx; transform:rotate(-9deg); }
+.cook-page .step-content { position:relative; }
+.step-sticker { position:absolute; z-index:3; right:18rpx; top:18rpx; width:62rpx; height:62rpx; transform:rotate(12deg); pointer-events:none; }
+.profile-bow { position:absolute; z-index:2; right:16rpx; top:12rpx; width:58rpx; height:58rpx; transform:rotate(8deg); }
+
+/* 参考效果图适配：稳定的左右 Banner 与更高的菜品照片占比 */
+.home-page { padding-left:22rpx; padding-right:22rpx; }
+.home-page .welcome {
+  min-height:326rpx;
+  margin-bottom:24rpx;
+  padding:30rpx 306rpx 28rpx 30rpx;
+  border-width:4rpx;
+  border-color:#efbd75;
+  border-radius:32rpx;
+  box-shadow:0 8rpx 0 #f2d6a3,0 24rpx 48rpx rgba(126,78,43,.17);
+}
+.home-page .welcome-copy {
+  position:relative; z-index:4; width:330rpx; padding:0; box-sizing:border-box;
+}
+.home-page .eyebrow {
+  display:inline-flex; max-width:310rpx; min-height:34rpx; margin-bottom:14rpx; padding:5rpx 12rpx;
+  border:2rpx solid #eaa884; border-radius:18rpx; color:#91452f; background:#fff2e8;
+  font-size:18rpx; line-height:1.35; letter-spacing:1rpx; white-space:nowrap;
+}
+.home-page .welcome-title { font-size:45rpx; line-height:1.16; letter-spacing:1rpx; }
+.home-page .welcome-title { display:inline-block; padding:10rpx 15rpx; border:2rpx solid #efd0bb; border-radius:18rpx; background:#fffaf2; box-shadow:0 5rpx 0 #f0dcc7; }
+.home-page .welcome-title>text { display:block; white-space:nowrap; }
+.home-page .welcome-title>text:first-child { color:#59483f; }
+.home-page .welcome-title>text:last-child { color:#e8663d; }
+.home-page .welcome-note { display:inline-block; width:auto; margin-top:12rpx; padding:8rpx 12rpx; border-radius:13rpx; color:#674d3f; background:#fffaf2; font-size:19rpx; font-weight:600; line-height:1.4; }
+.home-page .welcome-mascot { right:72rpx; bottom:-32rpx; width:236rpx; height:292rpx; }
+.home-page .welcome-helper { right:-4rpx; bottom:4rpx; width:136rpx; height:136rpx; }
+
+.home-page .search-box { height:88rpx; border-radius:24rpx; }
+.home-page .quick-grid { gap:14rpx; }
+.home-page .quick-grid .pantry-entry,.home-page .quick-grid .shopping-entry { min-height:204rpx; padding:20rpx; }
+.home-page .quick-grid .pantry-entry:after,.home-page .quick-grid .shopping-entry:after {
+  content:""; position:absolute; right:-22rpx; bottom:-24rpx; width:104rpx; height:104rpx;
+  border-radius:50%; background:rgba(255,255,255,.34); pointer-events:none;
+}
+.home-page .category-card { min-width:128rpx; padding:17rpx 20rpx; border-radius:22rpx; }
+.home-page .category-dot { display:flex; align-items:center; justify-content:center; width:38rpx; height:38rpx; border-radius:50%; background:rgba(255,255,255,.65); font-size:22rpx; }
+.home-page .recipe-list { display:grid; grid-template-columns:1fr 1fr; gap:18rpx 14rpx; }
+.home-page .recipe-row {
+  position:relative; display:flex; flex-direction:column; align-items:stretch; min-width:0; min-height:0;
+  padding:0 0 18rpx; overflow:hidden; border-radius:26rpx;
+}
+.home-page .recipe-thumb {
+  width:100%; height:226rpx; border:0; border-radius:24rpx 24rpx 0 0;
+  box-shadow:none; background:#f5eadf;
+}
+.home-page .recipe-copy { width:auto; margin:0; padding:16rpx 16rpx 0; }
+.home-page .recipe-name { padding-right:46rpx; overflow:hidden; font-size:27rpx; text-overflow:ellipsis; white-space:nowrap; }
+.home-page .recipe-subtitle { font-size:20rpx; }
+.home-page .recommendation-reason { display:-webkit-box; overflow:hidden; min-height:0; font-size:19rpx; -webkit-box-orient:vertical; -webkit-line-clamp:2; }
+.home-page .recipe-meta { gap:10rpx; justify-content:space-between; font-size:18rpx; }
+.home-page .favorite-star { position:absolute; z-index:2; top:184rpx; right:10rpx; width:60rpx; height:60rpx; margin:0; border:3rpx solid #fff; }
+.home-page .favorite-star image { width:44rpx; height:44rpx; }
+.home-page .recipe-row>.chevron { display:none; }
+.home-page .allergy-list-warning { font-size:17rpx; }
+
+/* 食材页：更接近参考图中的清爽标签与料理台 */
+.pantry-page .intro-card { min-height:250rpx; padding:30rpx 230rpx 28rpx 28rpx; }
+.pantry-page .intro-copy { position:relative; z-index:3; width:430rpx; padding:0; }
+.pantry-page .intro-card .eyebrow { display:inline-flex; justify-content:center; width:auto; min-width:176rpx; padding:4rpx 13rpx; box-sizing:border-box; color:#87422f!important; background:#fff1e7; border-color:#e9a888; text-align:center; }
+.pantry-page .intro-card .page-title { display:inline-block; margin-top:10rpx; padding:7rpx 12rpx; border-radius:15rpx; color:#4d3b33!important; background:#fffaf2; box-shadow:0 4rpx 0 #f0dcc7; font-size:36rpx; }
+.pantry-page .intro-card .page-subtitle { display:block; width:350rpx; margin-top:10rpx; padding:7rpx 11rpx; border-radius:13rpx; color:#6f584b!important; background:#fffaf2; font-size:20rpx; font-weight:600; }
+.pantry-page .intro-mascot { width:218rpx; height:218rpx; right:6rpx; bottom:-4rpx; }
+.pantry-page .search-box { height:86rpx; }
+.pantry-page .selected-list { gap:12rpx; }
+.pantry-page .selected-row { min-height:90rpx; border-radius:22rpx; }
+.pantry-page .amount-control { border-color:#f0cdb8; background:#fffaf5; }
+.pantry-page .amount-button { color:#bd5c3e; background:#fff0e7; }
+.pantry-page .find-button { position:relative; overflow:visible; }
+
+.prep-page .prep-header { min-height:300rpx; padding:30rpx 330rpx 28rpx 28rpx; }
+.prep-page .prep-copy { position:relative; z-index:3; width:300rpx; min-width:300rpx; padding:0; box-sizing:border-box; }
+.prep-page .step-kicker { color:#87422f!important; background:#fff1e7; border-color:#e9a888; }
+.prep-page .prep-title { display:inline-block; width:auto; margin-top:10rpx; padding:8rpx 12rpx; border-radius:16rpx; color:#4d3b33; background:#fffaf2; box-shadow:0 5rpx 0 #f0dcc7; font-size:40rpx; line-height:1.22; }
+.prep-page .prep-subtitle { display:block; width:250rpx; margin-top:10rpx; padding:7rpx 10rpx; border-radius:13rpx; color:#72594d; background:#fffaf2; font-size:20rpx; font-weight:650; line-height:1.4; }
+.prep-page .prep-mascot { right:252rpx; bottom:86rpx; width:100rpx; height:120rpx; }
+.prep-page .prep-sticker { display:none; }
+
+/* 个人页：头像信息、统计数字与功能入口组成完整头部 */
+.profile-page .profile-card { display:block; padding:24rpx 26rpx 22rpx; }
+.profile-page .profile-identity { display:flex; align-items:center; width:420rpx; padding:10rpx 13rpx; box-sizing:border-box; border:2rpx solid #efd0bb; border-radius:22rpx; background:#fffaf2; box-shadow:0 4rpx 0 #f0dcc7; }
+.profile-page .avatar { width:112rpx; height:112rpx; border:4rpx solid #fff; border-radius:50%; background:#fff3de; box-shadow:0 6rpx 18rpx rgba(115,71,42,.12); }
+.profile-page .profile-copy text:first-child { font-size:31rpx; }
+.profile-page .profile-stats { display:grid; grid-template-columns:repeat(3,1fr); width:370rpx; margin-top:10rpx; padding:9rpx 6rpx; box-sizing:border-box; border:2rpx solid #efd9c6; border-radius:18rpx; background:#fffaf2; box-shadow:0 4rpx 0 #f0e0cf; }
+.profile-page .profile-stats view { text-align:center; }
+.profile-page .profile-stats view+view { border-left:1rpx solid rgba(188,133,91,.2); }
+.profile-page .profile-stats text { display:block; color:#796256; font-size:19rpx; }
+.profile-page .profile-stats text:first-child { margin-bottom:3rpx; color:#9e4f37; font-size:31rpx; font-weight:800; }
+.profile-page .general-settings-entry { min-height:84rpx; }
+.profile-page .preference-card>view { background:linear-gradient(135deg,#fff,#fff8e7)!important; }
+
+/* 详情、采购、烹饪强化照片卡和操作区，但不改变业务结构 */
+.detail-page .title-block { border-radius:28rpx; }
+.detail-page .rating-card { background:linear-gradient(145deg,#fff,#fff8e8)!important; }
+.shopping-page .shopping-row { border-radius:24rpx; }
+.shopping-page .shopping-row ingredient-image { border-radius:18rpx; background:#fff; }
+.cook-page .step-title { color:#59483f; }
+.cook-page .bottom-action .primary-button { box-shadow:0 7rpx 0 #dc704e,0 14rpx 26rpx rgba(244,127,90,.2); }
+
+/* 插画头图不使用遮罩：通过深色文字与安全区保证可读性。 */
+.settings-intro-copy { position:relative; z-index:3; width:390rpx; padding:12rpx 15rpx; box-sizing:border-box; border:2rpx solid #efd0bb; border-radius:19rpx; background:#fffaf2; box-shadow:0 4rpx 0 #f0dcc7; }
+.settings-intro-title { display:block; color:#59483f!important; font-size:34rpx; font-weight:800; }
+.settings-intro-note { display:block; max-width:490rpx; margin-top:10rpx; color:#735d50!important; font-size:21rpx; font-weight:650; line-height:1.55; text-shadow:0 1rpx 0 #fff; }
+.shopping-summary>view text:first-child { color:#59483f!important; }
+.shopping-summary>view text:last-child,.shopping-summary>text { color:#725d50!important; font-weight:600; text-shadow:0 1rpx 0 #fff; }
+.shopping-summary-title { color:#59483f!important; font-size:35rpx; font-weight:800; }
+.shopping-summary-count { color:#725d50!important; font-size:20rpx; }
+.shopping-summary-note { color:#725d50!important; font-size:19rpx; }
+.shopping-summary-copy { position:relative; z-index:3; display:block!important; width:430rpx; padding:11rpx 14rpx; box-sizing:border-box; border:2rpx solid #efd0bb; border-radius:18rpx; background:#fffaf2; box-shadow:0 4rpx 0 #f0dcc7; }
+.shopping-summary-copy>view { display:flex; align-items:flex-end; justify-content:space-between; gap:14rpx; }
+.shopping-summary-copy>.shopping-summary-note { display:block; margin-top:10rpx; line-height:1.5; }
+.profile-card .profile-copy text { color:#59483f!important; text-shadow:0 1rpx 0 #fff; }
+
+@media (max-width:350px) {
+  .home-page .welcome { min-height:278rpx; padding-right:245rpx; }
+  .home-page .welcome-copy { width:285rpx; }
+  .home-page .welcome-title { font-size:39rpx; }
+  .home-page .welcome-note { width:270rpx; font-size:18rpx; }
+  .home-page .welcome-mascot { right:52rpx; width:204rpx; }
+  .home-page .welcome-helper { width:112rpx; height:112rpx; }
+  .home-page .recipe-thumb { height:194rpx; }
+  .home-page .favorite-star { top:154rpx; }
+  .pantry-page .intro-card { padding-right:190rpx; }
+  .prep-page .prep-header { padding-right:270rpx; }
+  .prep-page .prep-copy { width:250rpx; min-width:250rpx; }
+  .prep-page .prep-title { width:250rpx; font-size:38rpx; }
+  .prep-page .prep-subtitle { width:250rpx; }
+  .profile-page .profile-identity { width:360rpx; }
+  .profile-page .profile-stats { width:320rpx; }
+  .settings-intro-copy { width:340rpx; }
+  .shopping-summary-copy { width:370rpx; }
+}
